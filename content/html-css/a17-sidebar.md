@@ -9,4 +9,4 @@ Create the minified sidebar that is presented in the next image.
 
 **Get the icons and logos on the internet (any logo is useful, you don’t need to use the exact same logos).**
 
-Image: https://github.com/selsa-inube/bootcamp/blob/main/content/html-css/assets/sidebar.png
+Image: https://github.com/selsa-inube/bootcamp-apr/blob/main/content/html-css/assets/sidebar.png

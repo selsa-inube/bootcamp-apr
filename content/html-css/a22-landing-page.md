@@ -9,4 +9,4 @@ Take into account that:
 3. The projects stops in the section where the brands are displayed, you don’t have to create the card with the emoji at the end.
 4. The dark background with a darkgray grid can be replaced with a plain black background.
 
-Image: https://github.com/selsa-inube/bootcamp/blob/main/content/html-css/assets/landing-page.png
+Image: https://github.com/selsa-inube/bootcamp-apr/blob/main/content/html-css/assets/landing-page.png

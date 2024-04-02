@@ -9,6 +9,6 @@
 
 **Notes**:
 
-- You can find the mockups here: https://github.com/selsa-inube/bootcamp/tree/main/content/react/assets
+- You can find the mockups here: https://github.com/selsa-inube/bootcamp-apr/tree/main/content/react/assets
 - Create one vite project in the folder src/final
 - All team members should work in the same project. This project will be the only one to be reviewed.

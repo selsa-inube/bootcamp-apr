@@ -6,7 +6,7 @@ Create a vite project and mock the following components:
 2. dish card
 3. credit card
 
-You can find all images here: https://github.com/selsa-inube/bootcamp-feb/tree/main/content/react/assets
+You can find all images here: https://github.com/selsa-inube/bootcamp-apr/tree/main/content/react/assets
 
 Notes:
 

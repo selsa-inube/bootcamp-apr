@@ -2,7 +2,7 @@
 
 This assignment requires that you create an HTML file with the markup file you find here:
 
-https://github.com/selsa-inube/bootcamp/blob/main/content/html-css/assets/markup-readme.pdf
+https://github.com/selsa-inube/bootcamp-apr/blob/main/content/html-css/assets/markup-readme.pdf
 
 **Notes**:
 

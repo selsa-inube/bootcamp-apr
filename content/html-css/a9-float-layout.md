@@ -9,4 +9,4 @@ Guidelines:
 - For icons, you can find some in fontawesome.com
 - Use pseudoclasses for controlling states of the elements.
 
-Image: https://github.com/selsa-inube/bootcamp/blob/main/content/html-css/assets/float-layout.png
+Image: https://github.com/selsa-inube/bootcamp-apr/blob/main/content/html-css/assets/float-layout.png

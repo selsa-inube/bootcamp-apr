@@ -8,4 +8,4 @@ Create the next mockup of a weather mobile app:
 4. You can go back to the home page using the < icon in the right image.
 5. You can get weather icons from here: https://fontawesome.com/search?c=weather&o=r
 
-Image: https://github.com/selsa-inube/bootcamp/blob/main/content/html-css/assets/weather.png
+Image: https://github.com/selsa-inube/bootcamp-apr/blob/main/content/html-css/assets/weather.png
