@@ -1,0 +1,132 @@
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+main {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  background-color: #fff;
+  color: #1d1d1f;
+  font-style: normal;
+}
+
+h1 {
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.image {
+  margin-top: 44px;
+  margin-bottom: 2px;
+  width: calc(100% + 330px);
+  margin-left: -150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.bold1 {
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+
+.container .text1 {
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.texts {
+  font-size: 14px;
+  line-height: 1.33337;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.category1 {
+  color: #6e6e73;
+  border-color: #6e6e73;
+  display: block;
+}
+
+.category2 {
+  margin-top: 4px;
+  color: #6e6e73;
+  font-size: 15px;
+  line-height: 1.28577;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.text2 {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 500;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.description {
+  color: #6e6e73;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+p {
+  margin-bottom: 1.5em;
+  color: #4a4a4e;
+}
+strong {
+  font-weight: bold;
+  font-size: 18px;
+}
+ul {
+  list-style-type: disc;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.title1 {
+  font-size: 16px;
+  line-height: 1.16667;
+  font-weight: 700;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  margin-bottom: 16px;
+  margin-top: 52px;
+}
+.component-content {
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
