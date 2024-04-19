@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Suscripción</title>
+    <link rel="stylesheet" href="A5.css" />
+    <!-- Incluye la biblioteca Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/001112f563.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="#" method="POST" class="formulario">
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre (obligatorio)"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Correo electrónico (obligatorio)"
+        required
+      />
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Teléfono (opcional)"
+      />
+      <label for="terminos" class="label-checkbox">
+        <input type="checkbox" id="terminos" name="terminos" required />
+        Acepto los <a href="#terminos-y-condiciones">Términos y Condiciones</a>
+      </label>
+      <button type="submit" class="btn-submit">Suscribirse</button>
+    </form>
+
+    <section id="terminos-y-condiciones" class="terminos">
+      <h2>Términos y Condiciones</h2>
+      <p class="blue-text"></p>
+      <ul class="icon-list">
+        <!-- Utiliza la clase "fa" para los íconos de Font Awesome -->
+        <li><i class="fa fa-check-square gray-icon"></i> Término 1</li>
+        <li><i class="fa fa-check-square"></i> Término 2</li>
+        <li><i class="fa fa-check-square gray-icon"></i> Término 3</li>
+        <li><i class="fa fa-check-square"></i> Término 4</li>
+        <li><i class="fa fa-check-square gray-icon"></i> Término 5</li>
+        <li><i class="fa fa-check-square"></i> Término 6</li>
+        <li><i class="fa fa-check-square gray-icon"></i> Término 7</li>
+        <li><i class="fa fa-check-square"></i> Término 8</li>
+        <li><i class="fa fa-check-square gray-icon"></i> Término 9</li>
+        <li><i class="fa fa-check-square"></i> Término 10</li>
+      </ul>
+    </section>
+  </body>
+</html>
