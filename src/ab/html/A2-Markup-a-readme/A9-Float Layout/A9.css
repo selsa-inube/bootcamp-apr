@@ -11,11 +11,11 @@ body {
   float: left;
   width: 350px;
   background-color: #1e1e1f;
-  height: 0 auto;
+  height: 2000px;
 }
 
 .content {
-  position: relative; /* Establece el posicionamiento relativo */
+  position: relative; 
   overflow: hidden;
 }
 
@@ -112,7 +112,7 @@ p {
   text-align: center;
   line-height: 4rem;
   display: inline-block;
-  text-decoration: none; /* Elimina la decoración de texto de los enlaces */
+  text-decoration: none; 
 }
 
 .btn {
