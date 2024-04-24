@@ -53,6 +53,9 @@ h2{
   font-size: 17px;
   padding: 1%;
 }
+.icons i:hover {
+  color: #0a0a0a; /
+}
 #image {
     margin-top: 44px;
     margin-bottom: 2px;
