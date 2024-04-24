@@ -21,7 +21,7 @@ body {
   border: 1px solid #ccc;
 }
 
-.input-error {
+.formulario input:invalid {
   border-color: #ff6347;
 }
 
@@ -30,12 +30,14 @@ body {
   margin-bottom: 0.9375rem;
 }
 
-.label-checkbox a {
+.label-checkbox a:link,
+.label-checkbox a:visited {
   color: #007bff;
   text-decoration: none;
 }
 
-.label-checkbox a:hover {
+.label-checkbox a:hover,
+.label-checkbox a:active {
   text-decoration: underline;
 }
 
@@ -61,8 +63,19 @@ body {
   text-align: center;
 }
 
-.blue-text {
+#terminos-y-condiciones:target {
+  max-width: 120ch;
+  margin: 1.25rem auto;
+}
+
+#terminos-y-condiciones:target h2 {
   color: #0747a6;
+}
+
+#terminos-y-condiciones:target p,
+#terminos-y-condiciones:target ul {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .icon-list {
@@ -74,6 +87,14 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.icon-list li:nth-child(odd) .fa {
+  color: #5e6c84;
+}
+
 .gray-icon {
   color: #5e6c84;
+}
+
+.blue-text {
+  color: #0747a6;
 }
