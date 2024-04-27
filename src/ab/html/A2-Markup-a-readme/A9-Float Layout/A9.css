@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ body {
 }
 
 .content {
-  position: relative; 
+  position: relative;
   overflow: hidden;
 }
 
@@ -83,8 +84,8 @@ hr {
 .text-container {
   position: absolute;
   top: 20%;
-  left: 20%;
-  text-align: center;
+  left: 5%; /* Modificamos el valor left */
+  text-align: left;
   color: white;
   z-index: 1;
 }
@@ -92,45 +93,40 @@ hr {
 .text-container h1 {
   font-size: 80px;
   margin-bottom: 40px;
-  margin-left: -200px;
+  margin-top: -30px;
+  margin-left: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .text-container h2 {
-  font-size: 40px;
+  font-size: 50px; 
   margin-bottom: 40px;
-  margin-left: -150px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 30; 
+  margin-left: 0;
+  font-family:  "Montserrat", sans-serif;
 }
 
-.btn,
-.btn1 {
-  margin-top: 150px;
+.text-container a {
+  margin-right: 20px;
+  margin-top: 100px;
   height: 4rem;
   width: 8rem;
   border-radius: 10px;
   text-align: center;
   line-height: 4rem;
   display: inline-block;
-  text-decoration: none; 
-}
-
-.btn {
-  margin-left: -500px;
-  margin-right: 20px;
-  border: 2px solid black;
+  text-decoration: none;
   color: black;
   background-color: rgb(214, 165, 3);
+  border: 2px solid black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn1 {
-  background-color: transparent;
-  color: white;
-  border: 2px solid rgb(255, 255, 255);
-}
-
-.btn:hover,
-.btn1:hover {
+.text-container a:hover {
   background-color: #041b2c;
   color: white;
+}
+
+.menu a:hover p {
+  color: rgb(80, 72, 72); 
 }
