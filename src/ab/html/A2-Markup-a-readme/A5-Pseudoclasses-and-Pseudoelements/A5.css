@@ -98,3 +98,27 @@ body {
 .blue-text {
   color: #0747a6;
 }
+.styled-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.styled-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 25px;
+}
+
+.styled-list li:before {
+  content: "\2713";
+  color: #4caf50;
+  font-size: 1em;
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+}
+
+.styled-list li:nth-child(odd) {
+  background-color: #f4f4f4;
+}
