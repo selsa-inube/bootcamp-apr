@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ h3 {
   margin-top: 37px;
   color: white;
 }
-.menu .enlace {
+.menu a {
   width: 100%;
   padding: 15px 0 15px 10px;
   border-radius: 8px;
@@ -48,27 +48,27 @@ h3 {
   font-size: 20px;
   transition: background-color 0.3s ease;
 }
-.menu .enlace:hover {
+.menu a:hover {
   background-color: #131212;
 }
 
-.menu .enlace i {
+.menu a i {
   font-size: 25px;
   margin-left: 20px;
   color: white;
 }
 
-.menu .enlace span {
+.menu a span {
   margin-left: 20px;
 }
-.menu .enlace:hover,
-.menu .enlace:focus-visible {
+.menu a:hover,
+.menu a:focus-visible {
   cursor: pointer;
 }
 img {
   width: 100%;
 }
-.menu .enlace:hover i {
+.menu a:hover i {
   color: yellow;
 }
 p {
@@ -84,7 +84,7 @@ hr {
 .text-container {
   position: absolute;
   top: 20%;
-  left: 5%; /* Modificamos el valor left */
+  left: 5%;
   text-align: left;
   color: white;
   z-index: 1;
@@ -99,11 +99,11 @@ hr {
 }
 
 .text-container h2 {
-  font-size: 50px; 
+  font-size: 50px;
   margin-bottom: 40px;
-  font-weight: 30; 
+  font-weight: 30;
   margin-left: 0;
-  font-family:  "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .text-container a {
@@ -119,7 +119,9 @@ hr {
   color: black;
   background-color: rgb(214, 165, 3);
   border: 2px solid black;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .text-container a:hover {
@@ -127,6 +129,7 @@ hr {
   color: white;
 }
 
-.menu a:hover p {
-  color: rgb(80, 72, 72); 
+.menu p:hover {
+  color: rgb(80, 72, 72);
+  cursor: pointer;
 }
