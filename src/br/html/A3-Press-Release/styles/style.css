@@ -58,20 +58,15 @@ h2 {
   color: #888787;
   font-size: 0.9rem;
   margin: 1% auto;
-}
-
-.fingcap{
   display: flex;
-  align-items: center;
-  width: 700px;
-  margin-left: 15%;
 }
 
-figcaption{
-  flex: 1;
+figcaption > a{
+  margin-left: 5%;
+  position: relative;
 }
 
-.fingcap i{
+i{
   color: #58585a;
   font-size: 17px;
   padding: 1%;
@@ -86,9 +81,8 @@ li {
   margin-left: 3%;
 }
 
-.description h2{
+h2{
   font-size: 1.2em;
-  margin-top: 10%;
 }
 
 h4 {
@@ -96,7 +90,7 @@ h4 {
   margin: 0;
 }
 
-.about {
+#about {
   font-size: 0.6em;
 }
 
