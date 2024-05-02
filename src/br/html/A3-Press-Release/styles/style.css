@@ -54,11 +54,12 @@ h2 {
   color: #303030;
 }
 
-.img-gif {
+figcaption {
   color: #888787;
   font-size: 0.9rem;
   margin: 1% auto;
   display: flex;
+  width: 700px;
 }
 
 figcaption > a{
