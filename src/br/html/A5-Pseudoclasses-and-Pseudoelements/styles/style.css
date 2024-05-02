@@ -33,7 +33,7 @@ input {
   border-color: green;
 }
 
-.terminos {
+div {
   height: 100vh;
   background-color: #deebff;
   display: flex;
@@ -50,10 +50,10 @@ ul {
   list-style: none;
 }
 
-.li-one {
-  color: #0747a6 !important;
+ul li:first-of-type  {
+  color: #0747a6;
 }
 
-.terminos-lista li:nth-child(odd) {
+li:nth-child(odd) .fa-check {
   color: #5e6c84;
 }
