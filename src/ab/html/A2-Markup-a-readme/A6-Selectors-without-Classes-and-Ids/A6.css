@@ -1,190 +1,100 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  color: rgb(41, 39, 39);
-}
-.sidebar {
-  float: left; /* Add this */
-  width: 500px;
-  height: 900px;
-  background-color: #fffcfc;
-}
-.content {
-  float: left; /* Add this */
-  width: 1180px;
-  height: 0 auto;
-  margin-top: 20px;
-}
-div {
-  display: block;
-}
-hr {
-  width: 68rem;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-.followed-line {
-  width: 68rem;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-.strong {
-  margin-top: 50px;
-  margin-bottom: 40px;
-  font-family: "Sedan", serif;
-  font-size: 18px;
-}
-.text1 {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-family: "Sedan", serif;
-}
-ul,
-li {
-  font-size: 1.4rem;
-  line-height: 32px;
-  padding-left: 10px;
-  margin-left: 12px;
-}
-.span {
-  font-size: 8rem;
-  line-height: 70px;
-  display: block;
 }
 
-.p-selector {
-  font-size: 1.4rem;
-  line-height: 32px;
-  display: flex;
-  align-items: center;
-}
-.text2 {
-  margin-top: 45px;
-  font-size: 1.8rem;
-  margin-bottom: 35px;
-}
-p {
-  font-size: 1.4rem;
-  line-height: 20px;
-  margin-bottom: 40px;
-}
-.number {
-  font-size: 7rem;
-  margin-right: 20rem;
-  display: flex;
-  margin-left: 20px;
-  letter-spacing: -4px;
-}
-.contexto-de-figura-en-linea {
-  font-size: 19px;
+:root {
+  --text-color: #a2a2ac;
 }
 
-.avatar {
-  float: left;
-  width: 250px;
-  height: 250px;
-  margin: 25px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  margin-left: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1rem solid rgb(133, 132, 132);
+body {
+  padding: 5%;
+  font-family: Georgia, serif;
+  margin-left: 30px;
 }
 
-.avatar1 {
-  float: left;
-  width: 250px;
-  height: 250px;
-  margin: 25px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  margin-left: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1rem solid rgb(133, 132, 132);
+h1 {
+  font-weight: 250;
+  line-height: 36px;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  border-bottom: 1.5px solid var(--text-color);
+  padding-bottom: 1.5%;
 }
-.avatar span,
-.avatar1 span {
-  font-size: 3rem;
+
+h2 {
+  padding-top: 2%;
+  font-weight: 500px;
+}
+
+h3::first-letter {
+  color: #2e2e38;
+  font-size: 5em;
   font-weight: bold;
+  line-height: 1;
+  margin-inline-end: 0.2rem;
 }
 
-.footer {
-  overflow: hidden;
-  background-color: rgb(196, 196, 196);
-  width: 1100px;
-  height: 600px;
-  margin-bottom: 30px;
+h3 {
+  font-size: 21px;
+  font-weight: 400;
 }
 
-.comment {
-  float: left;
-  text-align: center;
-  margin-left: 100px;
-  width: 400px;
-  height: 200px;
-  font-size: 25px;
+h5 {
+  color: #2e2e38;
+  font-size: 7em;
+  font-family: "EYInterstate", sans-serif;
+  font-weight: 100;
 }
-.comment1 {
-  float: left;
-  text-align: center;
-  margin-left: -60px;
-  width: 400px;
-  height: 200px;
-  font-size: 25px;
+
+ul {
+  padding: 3%;
+  border-bottom: 1.5px solid var(--text-color);
 }
-.column {
-  float: left;
-  width: 40%;
-  margin: 50px 5%;
-  height: 160px;
-  background-color: rgb(196, 196, 196);
+
+p,
+li {
+  font-size: 21px;
+  line-height: 1.5;
 }
-.hr-container {
+
+p{
+  padding: 1.5% 0;
+}
+
+
+
+section {
   display: flex;
+  background-color: rgb(185, 185, 185);
+  justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: 6% 0 2% 0;
 }
 
-.half-line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: rgb(105, 105, 105);
+section h5 {
+  border-radius: 50%;
+  border: solid 15px var(--text-color);
+  font-size: 3em;
+  padding: 6%;
+  margin: 0 90px;
 }
 
-.space {
-  width: 20px;
+section p {
+  width: 30%;
+  margin: 30px;
 }
 
-.element-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+h6, h4{
+  font-weight: 100;
+  font-size: 1em;
+  padding: 1.5% 0;
 }
 
-.element-left,
-.element-right {
-  width: 49%;
+h6{
+  border-top: 1.5px solid var(--text-color);
 }
 
-.figuras-en-linea,
-.figuras-en-linea1 {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.figuras-en-linea span,
-.figuras-en-linea1 span {
-  font-size: 8rem;
-}
-
-.richText-content {
-  font-size: 20px;
+h4{
+  border-bottom: 1.5px solid var(--text-color);
 }
