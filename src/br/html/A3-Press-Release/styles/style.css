@@ -91,7 +91,7 @@ h4 {
   margin: 0;
 }
 
-#about {
+div.txt-center:last-of-type > p:first-of-type {
   font-size: 0.6em;
 }
 
