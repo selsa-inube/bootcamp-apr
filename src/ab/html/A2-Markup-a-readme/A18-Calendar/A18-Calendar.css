@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -24,6 +25,7 @@ body {
   overflow: hidden;
   position: relative;
 }
+
 i {
   font-size: 30px;
   margin-top: 40px;
@@ -140,29 +142,5 @@ i {
   bottom: 0;
 }
 
-.calendario .celda::after {
-  margin-top: 11px;
-  height: 1000px;
-  width: 1px;
-  right: 0;
-}
-.celda:nth-child(4) hr {
-  width: 100%;
-  margin-top: 220px;
-  position: fixed;
-  margin-left: -230px;
-}
 
-.celda:nth-child(6) hr {
-  width: 100%;
-  margin-top: 430px;
-  position: fixed;
-  margin-left: -670px;
-}
 
-.celda:nth-child(9) hr {
-  width: 100%;
-  margin-top: 640px;
-  position: fixed;
-  margin-left: -83.5rem;
-}
