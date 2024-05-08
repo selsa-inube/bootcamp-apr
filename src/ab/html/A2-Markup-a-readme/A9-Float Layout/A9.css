@@ -29,7 +29,7 @@ body {
   background-color: #d6e9fe;
 }
 
-.menu a {
+ul a {
   color: white;
   text-decoration: none;
 }
@@ -37,7 +37,7 @@ h3 {
   margin-top: 37px;
   color: white;
 }
-.menu a {
+ul a {
   width: 100%;
   padding: 15px 0 15px 10px;
   border-radius: 8px;
@@ -48,27 +48,27 @@ h3 {
   font-size: 20px;
   transition: background-color 0.3s ease;
 }
-.menu a:hover {
+ul a:hover {
   background-color: #131212;
 }
 
-.menu a i {
+ul a i {
   font-size: 25px;
   margin-left: 20px;
   color: white;
 }
 
-.menu a span {
+ul a span {
   margin-left: 20px;
 }
-.menu a:hover,
-.menu a:focus-visible {
+ul a:hover,
+ul a:focus-visible {
   cursor: pointer;
 }
 img {
   width: 100%;
 }
-.menu a:hover i {
+ul a:hover i {
   color: yellow;
 }
 p {
@@ -129,7 +129,7 @@ hr {
   color: white;
 }
 
-.menu p:hover {
+ul p:hover {
   color: rgb(80, 72, 72);
   cursor: pointer;
 }
