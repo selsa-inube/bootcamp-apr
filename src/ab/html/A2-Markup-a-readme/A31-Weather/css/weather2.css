@@ -29,6 +29,7 @@ body > div > div:nth-child(1) {
   border-radius: 60px;
   background: linear-gradient(to bottom right, #26adfd, #1069f4);
   position: relative;
+  box-shadow: 0px 9px 9px 0px #073E8D; 
 }
 
 body > div > div:nth-child(1) i:nth-child(1) {
@@ -84,31 +85,31 @@ body > div > div:nth-child(1) span:nth-child(5)::before {
 }
 body > div > div:nth-child(1) img {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 20%;
   transform: translate(-50%, -50%);
-  height: 150px;
+  height: 130px;
 }
 
 body > div > div:nth-child(1) h2:nth-child(7) {
   position: absolute;
   font-family: "Noto Sans", sans-serif;
-  margin-left: 140px;
+  margin-left: 150px;
   font-size: 40px;
   color: #6ccdfe;
 }
 body > div > div:nth-child(1) h2 {
   position: absolute;
   font-family: "Noto Sans", sans-serif;
-  margin-top: -40px;
-  font-size: 80px;
+  margin-top: -20px;
+  font-size: 90px;
 }
 
 body > div > div:nth-child(1) h2:nth-child(7)::after {
   content: "°";
   display: block;
   font-size: 40px;
-  color: #9b9b9b;
+  color: #69D2FF;
   position: absolute;
   top: 0px;
   right: -15px;
@@ -123,7 +124,7 @@ h3 {
 h6 {
   position: absolute;
   font-family: "Noto Sans", sans-serif;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 12px;
   color: #48a8ff;
 }
@@ -235,7 +236,7 @@ ul li {
 }
 
 ul li img {
-  width: 40px;
+  width: 30px;
   height: 30px;
 }
 ul li span {
