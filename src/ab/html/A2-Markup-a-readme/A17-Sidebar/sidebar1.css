@@ -123,6 +123,7 @@ body {
   z-index: 1;
 }
 
+
 .dropdown ul {
   list-style-type: none;
   padding: 0;
@@ -160,7 +161,7 @@ body {
 .dropdown {
   display: none;
   position: absolute;
-  top: 70px;
+  top: 55px;
   right: 70px;
   margin-top: -60px;
   margin-left: 80px;
@@ -269,12 +270,14 @@ body {
   background-color: #f0f0f0;
 }
 
+
+
 #toggle2:checked + .dropdown {
   display: block;
-  top: -215px;
+  top: -248px;
   right: 0;
   width: 270px;
-  height: 335px;
+  height: 375px;
 }
 
 .dropdown ul li:nth-last-child(-n + 5) {
@@ -299,4 +302,11 @@ body {
 }
 .bottom-section .image-text img:last-child {
   margin-top: 10px;
+}
+
+
+.bottom-section span:nth-child(7) {
+  color: var(--text-color);
+  margin: 10px;
+  font-size: 15px;
 }
