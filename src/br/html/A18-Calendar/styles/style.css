@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    border: 1px solid #ccc;
+    font-family: sans-serif;
+    color: rgb(121, 120, 120);
+}
+
+.time {
+    grid-row: span ;
+    text-align: right;
+    padding-right: 50px;
+}
+.day {
+    grid-column: span 1;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.cell {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 134px;
+}
+
+li{
+    list-style: none;
+}
+
+li:nth-child(2){
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+}
+
+.time > p{
+    margin-bottom: 67px;
+}
+
+i{
+    font-size: 200%;
+    margin-top: 35px;
+}
+
+a{
+    color: rgb(121, 120, 120);
+}
+
+.cell > div{
+    background-color: #f6f8fa;
+    margin: 5%;
+    border-radius: 5%;
+    padding: 5%;
+    transition: transform 0.3s ease;
+}
+
+.cell > div > p{
+    margin: 4% 0;
+}
+
+img{
+    width: 3em;
+    border-radius: 50%;
+}
+
+main > div:nth-child(14) > div, main > div:nth-child(17) > div{
+    background-color: #e4eef8;
+    color: #5a99cf;
+}
+
+main > div:nth-child(21) > div, main > div:nth-child(43) > div{
+    background-color: #fcf0e4;
+    color: #e89e56;
+}
+
+main > div:nth-child(24) > div{
+    background-color: #ecf5e7;
+    color: #96c87a;
+}
+
+.cell > div:hover{
+    transform: translate(-40px, -40px);
+}
