@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Suscripción</title>
+    <link rel="stylesheet" href="A5.css" />
+    <script
+      src="https://kit.fontawesome.com/001112f563.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="#" method="POST" class="formulario">
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre (obligatorio)"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Correo electrónico (obligatorio)"
+        required
+      />
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        placeholder="Teléfono (opcional)"
+      />
+      <label for="terminos" class="label-checkbox">
+        <input type="checkbox" id="terminos" name="terminos" required />
+        Acepto los <a href="#terminos-y-condiciones">Términos y Condiciones</a>
+      </label>
+      <button type="submit" class="btn-submit">Suscribirse</button>
+    </form>
+
+    <section id="terminos-y-condiciones" class="terminos">
+      <h2>Términos y Condiciones</h2>
+      <p class="blue-text"></p>
+      <ul class="styled-list">
+        <li>
+          Al enviar este formulario, aceptas los términos y condiciones del
+          sitio web.
+        </li>
+        <li>
+          Los datos proporcionados serán utilizados de acuerdo con nuestra
+          política de privacidad.
+        </li>
+        <li>
+          No compartiremos tu información personal con terceros sin tu
+          consentimiento expreso.
+        </li>
+        <li>
+          Es responsabilidad del usuario revisar periódicamente los términos y
+          condiciones.
+        </li>
+        <li>
+          Podemos actualizar estos términos en cualquier momento sin previo
+          aviso.
+        </li>
+        <li>
+          Al utilizar este sitio web, aceptas estar sujeto a los términos y
+          condiciones vigentes.
+        </li>
+        <li>
+          Si tienes alguna pregunta sobre nuestros términos, contáctanos para
+          obtener más información.
+        </li>
+        <li>
+          Te agradecemos por confiar en nuestro sitio y por tu interés en
+          suscribirte.
+        </li>
+        <li>
+          Si deseas más detalles, consulta nuestra sección de preguntas
+          frecuentes o contáctanos directamente.
+        </li>
+        <li>
+          Estamos comprometidos en brindarte la mejor experiencia y proteger tu
+          privacidad en todo momento.
+        </li>
+        <li>
+          Gracias por ser parte de nuestra comunidad y por tu apoyo continuo.
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
