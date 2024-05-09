@@ -23,7 +23,7 @@ body {
   background: var(--body-color);
 }
 
-.sidebar {
+nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ body {
   padding: 10px 14px;
   background: var(--sidebar-color);
 }
-.sidebar li {
+nav li {
   height: 50px;
   margin-top: 5px;
   list-style: none;
@@ -41,39 +41,39 @@ body {
   align-items: center;
 }
 
-.sidebar li .icon {
+nav li .icon {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 60px;
   font-size: 20px;
 }
-.sidebar li .icon {
+nav li .icon {
   color: var(--text-color);
   transition: var(--trans-02);
 }
-.sidebar li .icons {
+nav li .icons {
   display: flex;
   align-items: end;
   justify-content: end;
   min-width: 180px;
   font-size: 20px;
 }
-.sidebar li .icons {
+nav li .icons {
   color: var(--text-color);
   transition: var(--trans-02);
 }
-.sidebar li a[href="#"] .icons {
+nav li a[href="#"] .icons {
   font-size: 24px;
 }
 
-.sidebar .image-text img {
+nav .image-text img {
   width: 40px;
   border-radius: 6px;
   margin-left: 10px;
 }
 
-.sidebar header:last-child .image-text {
+nav header:last-child .image-text {
   display: flex;
   align-items: center;
 }
@@ -85,7 +85,7 @@ body {
   border-radius: 6px;
   background: var(--primary-color-light);
 }
-.sidebar li a {
+nav li a {
   height: 100%;
   width: 100%;
   display: flex;
@@ -95,19 +95,19 @@ body {
   transition: var(--trans-04);
 }
 
-.sidebar li a:hover {
+nav li a:hover {
   background: var(--primary-color);
 }
-.sidebar li a:hover.icon {
+nav li a:hover.icon {
   color: var(--sidebar-color);
 }
 
-.sidebar li:hover .text {
+nav li:hover .text {
   color: var(--sidebar-color);
 }
 
-.sidebar li:hover .icon,
-.sidebar li:hover .icons {
+nav li:hover .icon,
+nav li:hover .icons {
   color: var(--sidebar-color);
 }
 
