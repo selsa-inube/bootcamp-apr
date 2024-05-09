@@ -33,10 +33,10 @@ body {
 
 .container-climate i:nth-child(1) {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   left: 45px;
-  margin-top: 25px;
+  margin-top: -180px;
   margin-right: 5px;
   align-self: flex-start;
 }
@@ -234,7 +234,7 @@ span:nth-child(19) {
 }
 
 .days-list li img {
-  width: 30px;
+  width: 40px;
   height: 30px;
 }
 .days-list li span {
@@ -245,14 +245,24 @@ span:nth-child(19) {
   margin-right: 0; 
   font-weight: bold;
 }
-
-.days-list li span:nth-child(4) {
+.days-list li span:nth-child(2) {
   display: flex; 
   align-items: center;
+  margin-left: -40px;
   
 }
 
-.days-list li span:nth-child(4) span {
-  margin-right: 0; /* Elimina el margen derecho del número */
+
+.days-list li span:nth-child(3) {
+  display: flex; 
+  align-items: center;
+  margin-right: -120px; 
   margin-left: 5px; 
+  
 }
+
+.days-list li span:nth-child(4)  {
+  margin-left: 5px; 
+
+}
+
