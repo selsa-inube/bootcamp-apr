@@ -9,7 +9,7 @@ body {
   align-items: center;
 }
 
-.container {
+body > div:first-child  {
   height: 920px;
   width: 500px;
   border-radius: 60px;
@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 
-.container-climate {
+body > div > div:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
   position: relative;
 }
 
-.container-climate i:nth-child(1) {
+body > div > div:nth-child(1) i:nth-child(1) {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -41,14 +41,14 @@ body {
   align-self: flex-start;
 }
 
-.container-climate i:nth-child(2) {
+body > div > div:nth-child(1) i:nth-child(2) {
   color: white;
   margin-top: 25px;
   font-size: 20px;
   margin-right: 5px;
   align-self: flex-start;
 }
-.container-climate i:nth-child(4) {
+body > div > div:nth-child(1) i:nth-child(4) {
   color: white;
   font-size: 26px;
   position: absolute;
@@ -59,13 +59,13 @@ body {
   align-self: flex-start;
 }
 
-.container-climate h1 {
+body > div > div:nth-child(1) h1 {
   font-family: "Noto Sans", sans-serif;
   margin-top: 20px;
   font-size: 28px;
   align-self: flex-start;
 }
-.container-climate span:nth-child(5) {
+body > div > div:nth-child(1) span:nth-child(5) {
   color: white;
   top: 55px;
   font-size: 16px;
@@ -76,12 +76,12 @@ body {
   font-size: 13px;
   width: 17%;
 }
-.container-climate span:nth-child(5)::before {
+body > div > div:nth-child(1) span:nth-child(5)::before {
   content: "●";
   color: #c7fc78;
   margin-right: 5px;
 }
-.container-climate img {
+body > div > div:nth-child(1) img {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -89,14 +89,14 @@ body {
   height: 300px;
 }
 
-.container-climate h2 {
+body > div > div:nth-child(1) h2 {
   position: absolute;
   font-family: "Noto Sans", sans-serif;
   margin-top: 22rem;
   font-size: 150px;
 }
 
-.container-climate h2::after {
+body > div > div:nth-child(1) h2::after {
   content: "°";
   display: block;
   font-size: 40px;
@@ -126,7 +126,7 @@ hr {
   border-color: #6aa7f1;
 }
 
-.container-climate i:nth-child(11) {
+body > div > div:nth-child(1) i:nth-child(11) {
   font-size: 20px;
   position: absolute;
   left: 45px;
@@ -136,7 +136,7 @@ hr {
   margin-bottom: 70px;
 }
 
-.container-climate i:nth-child(14) {
+body > div > div:nth-child(1) i:nth-child(14) {
   position: absolute;
   color: white;
   margin-top: 25px;
@@ -144,7 +144,7 @@ hr {
   align-self: flex-end;
   margin-bottom: 70px;
 }
-.container-climate i:nth-child(17) {
+body > div > div:nth-child(1) i:nth-child(17) {
   font-size: 26px;
   position: absolute;
   right: 30px;
@@ -215,7 +215,7 @@ a:hover {
   color: #116df4;
 }
 
-.panel-container {
+body > div > div:nth-child(4) {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
