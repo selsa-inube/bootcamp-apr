@@ -28,7 +28,7 @@ nav {
   top: 0;
   left: 0;
   height: 100%;
-  width: 0 auto;
+  width: 80px;
   border-radius: 10px;
   padding: 10px 14px;
   background: var(--sidebar-color);
@@ -77,6 +77,16 @@ nav header:last-child .image-text {
   display: flex;
   align-items: center;
 }
+header ul li:nth-child(1):hover::before,
+header ul li:nth-child(2):hover::before,
+header ul li:nth-child(3):hover::before,
+header ul li:nth-child(4):hover::before {
+  content: "✔"; 
+  color: var(--text-color); 
+  font-size: 20px; 
+  position: absolute; 
+  left: 250px; 
+}
 
 .search-box input {
   outline: none;
@@ -110,12 +120,16 @@ nav li:hover .icon,
 nav li:hover .icons {
   color: var(--sidebar-color);
 }
-
+.nav-link a .bx.bxs-bell.icon + .text.nav-text {
+  margin-top: 10px;
+  margin-left: -30px;
+  color: #F34A23;
+}
 .dropdown {
   display: none;
   position: absolute;
   top: 50px;
-  left: 0;
+  left: -10px;
   background-color: #ffffff;
   width: 350px;
   border: 1px solid #ccc;
@@ -275,9 +289,16 @@ nav li:hover .icons {
   background-color: #f0f0f0;
 }
 
-
-
 #toggle2:hover + .dropdown {
+  display: block;
+  top: -248px;
+  right: 0;
+  width: 270px;
+  height: 375px;
+}
+
+
+#toggle2:checked + .dropdown {
   display: block;
   top: -248px;
   right: 0;
@@ -316,3 +337,5 @@ nav li:hover .icons {
 .bottom-section span:nth-child(7) {
   color: var(--text-color);
 }
+
+
