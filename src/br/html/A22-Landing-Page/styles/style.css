@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -9,35 +10,43 @@ body{
 }
 
 header{
-    width: 100%;
-    height: 10vh;
     background-color: #0c0d0d;
     display: flex;
     justify-content: space-around;
     border-bottom: solid 1px white;
+    align-items: center;
+    padding: 1%;
 }
 
-nav > ul{
-    display: flex;
-    
+header > i.fa-solid{
+    display: none;
 }
 
-li{
-    list-style: none;
-    padding: 8%;
+nav {
+    text-align: center;
+    width: 60%;
 }
 
-ul > li:first-child > a{
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav > ul > li > a {
     text-decoration: none;
     color: white;
-    border: none;
+    font-size: 1.3em;
+    border-left: 1px solid white;
+    padding-left: 3%;
 }
 
-ul > li > a{
-    text-decoration: none;
-    color: rgb(153, 153, 153);
-    border-left: solid 1px rgb(153, 153, 153);
-    padding: 10px;
+nav > ul > li:first-child > a{
+    border: none;
 }
 
 
@@ -46,8 +55,8 @@ header > button{
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 2px 20px;
-    margin: 1%;
+    padding: 0.6% 2%;
+    font-size: 1.4em;
 }
 
 body > div{
@@ -58,7 +67,9 @@ body > div{
 }
 
 body > div > div > p{
-    color: rgb(153, 153, 153);
+    color: rgb(99, 97, 97);
+    margin-top: 10%;
+    font-size: 1.3em;
 }
 
 .project{
@@ -74,7 +85,10 @@ body > div > div > button{
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 2%;
+    padding: 3% 6%;
+    font-size: 1.4em;
+    margin-top: 6%;
+    margin-right: 3%;
 }
 
 body > div > div > button:nth-child(3){
@@ -83,14 +97,92 @@ body > div > div > button:nth-child(3){
 
 body > div > div{
     margin-top: 7%;
-    margin-left: 7%;
+    margin-left: 9%;
 }
 
 h1{
-    font-size: 4em;
-    font-weight: 100;
+    font-size: 4.7em;
+}
+
+body > div > :first-child{
+    width: 100%;
 }
 
 body > div > div:nth-child(2){
     margin-right: 10%;
 }
+
+section{
+    margin-top: 20%;
+}
+
+section > p{
+    color: #727272;
+    font-size: 2em;
+    text-align: center;
+}
+
+section > div{
+    display: flex;
+    filter: grayscale(100%);
+    justify-content: space-around;
+    align-items: center;
+}
+
+section > div > img{
+    width: 10%;
+}
+
+@media only screen and (max-width: 768px){
+    header{
+        justify-content: space-between;
+        padding: 2% 5%;
+    }
+    
+    nav, header > button{
+        display: none;
+    }
+
+    header > i.fa-solid{
+        display: block;
+        font-size: 1.8em;
+    }
+
+    body > div {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    body > div > div > p{
+        font-size: 1em;
+    }
+
+    h1{
+        font-size: 2.3em;
+    }
+
+    body > div > div:nth-child(2){
+        margin-top: 0;
+    }
+
+    .project{
+        top: 52%;
+    }
+
+    section{
+        margin-top: 30%;
+    }
+
+    section > p{
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .project{
+        top: 80%;
+    }
+}
+
