@@ -31,7 +31,7 @@ nav ul:first-child{
 nav p:nth-child(2){
     font-size: 15px;
     position:fixed;
-    margin-top: -25px;
+    margin-top: -26px;
 }
 nav p:nth-child(1){
     margin-bottom: 25px;
