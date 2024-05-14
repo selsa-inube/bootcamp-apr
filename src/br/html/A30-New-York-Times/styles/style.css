@@ -5,8 +5,27 @@
 }
 
 body{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
+    background-color: #F7F7F7;
+    margin-left: 6.5%;
+}
+
+ul:first-child{
+    margin-left: -6.5%;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 3%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul:first-child > li > a > i{
+    color: black;
+    margin: 20px 0;
 }
 
 header{
@@ -65,17 +84,22 @@ nav > i{
     color: white;
     padding: 30px;
 }
-
 ul{
     list-style: none;
     display: flex;
+}
+
+nav:nth-child(3) > ul{
+    list-style: none;
+    margin: 0 2%;
+    width: 100%;
+    justify-content: space-between;
 }
 
 a{
     text-decoration: none;
     color: rgb(167, 166, 166);
     font-size: 1.2em;
-    margin: 0 35px;
 }
 
 section{
@@ -210,7 +234,24 @@ section > div > article:first-child{
 section > div > article:last-child{
     padding-right: 0;
 }
-/* 
-section:nth-child(4) > div{
-    border: 1px solid red;
-} */
+
+section:nth-child(5) > div{
+    justify-content: space-between;
+}
+
+section:nth-child(5) > div > div{
+    padding: 4% 8%;
+}
+
+section:nth-child(5) > div > div:nth-child(1), section:nth-child(5) > div > div:nth-child(4), section:nth-child(5) > div > div:nth-child(6){
+    background-color: #CA495E;
+}
+
+section:nth-child(5) > div > div:nth-child(2), section:nth-child(5) > div >  div:nth-child(3){
+    background-color: #5C8E5B;
+}
+
+section:nth-child(5) > div > div:nth-child(5){
+    background-color: #141316;
+}
+
