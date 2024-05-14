@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body{
@@ -9,11 +12,13 @@ body{
     margin: 0 auto;
     background-color: #F7F7F7;
     margin-left: 6.5%;
+
 }
 
-ul:first-child{
+nav ul:first-child{
     margin-left: -120px;
     position: fixed;
+    margin-top: 51%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -23,11 +28,21 @@ ul:first-child{
     justify-content: space-between;
 }
 
+nav p:nth-child(2){
+    font-size: 15px;
+    position:fixed;
+    margin-top: -25px;
+}
+nav p:nth-child(1){
+    margin-bottom: 25px;
+}
 
-ul:first-child > li > i{
+nav ul:first-child > li > i{
     color: black;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     cursor: pointer;
+
 }
 
 header{
@@ -54,6 +69,9 @@ header > div > i:nth-child(2)::after{
     position: relative;
     margin-left: -25%;
     top: -0.8em;
+}
+h1{
+    font-family: "UnifrakturMaguntia", cursive;
 }
 
 header button{
@@ -96,6 +114,8 @@ nav > i{
     color: white;
     padding: 30px;
 }
+
+
 ul{
     list-style: none;
     display: flex;
@@ -114,7 +134,7 @@ nav:nth-child(3) > ul{
 a{
     text-decoration: none;
     color: rgb(167, 166, 166);
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 section{
@@ -169,7 +189,7 @@ article > div > button{
     margin-right: 2%;
 }
 
-article > h1{
+article > h5{
     font-size: 2.3em;
 }
 
