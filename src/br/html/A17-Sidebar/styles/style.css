@@ -1,0 +1,171 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    height: 200vh;
+    background-color: #e0e0e0;
+}
+
+nav{
+    width: 5vw;
+    height: 96vh;
+    position: fixed;
+    background-color: white;
+    border-radius: 20px;
+    border:#c9c9c9 groove  1px;
+    top: 2%;
+    left: 1%;
+}
+
+nav a{
+    display: block;
+    padding: 5% 10%;
+    margin-left: 25%;
+    color: rgb(53, 53, 53);
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: rgb(230, 230, 230);
+    color: rgb(53, 53, 53);
+    border-radius: 5px;
+    width: 1.2vw;
+}
+
+img{
+    width: 2.5vw;
+    border-radius: 20px;
+    border: #aaa9a9 solid 2px;
+}
+.menu > li > img{
+    padding: 3%;
+    margin: 20%;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+
+.submenu{
+    position: fixed;
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    width: 17vw;
+    margin-left: 110%;
+    padding: 20%;
+    position: absolute;
+    top: 0;
+}
+
+.submenu > li{
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.submenu > li > a > ul > li:nth-child(2){
+    color: #aaa9a9;
+    font-size: 0.8em;
+    width: 200%;
+}
+
+.submenu > li > a > img{
+    margin: 0 5%;
+    width: 2.5vw;
+    height: 5vh;
+}
+
+.menu li:hover .submenu{
+    display: inline;
+}
+
+nav > ul:nth-child(5) > li:nth-child(1) a i {
+    color: #aee9dc;
+}
+
+nav > ul:nth-child(5) > li:nth-child(2) a i{
+    color: #c9d3f6;
+}
+
+nav > ul:nth-child(5) > li:nth-child(3) a i{
+    color: #e2c6f6;
+}
+
+/* ---------- */
+
+nav > ul:nth-child(2), nav > ul:nth-child(3), nav > ul:nth-child(4){
+    margin: 1vw 0 ;
+}
+
+nav > ul:nth-child(5){
+    margin: 1vw 0 7vw 0;
+}
+
+nav > ul:nth-child(8) > li > ul{
+    position: absolute;
+    margin-top: 50vh;
+    display: none;
+    bottom: 0%;
+    padding: 10%;
+}
+
+.submenu > li > img{
+    margin-right: 5%;
+}
+
+.submenu > li > a{
+    display: flex;
+    margin-left: -4%;
+    font-size: 1.1em;
+}
+
+.submenu > li > a > i{
+    margin-right: 10%;
+}
+
+.submenu > li:nth-child(5) a i{
+    color: #e4c072;
+}
+
+.submenu > li:nth-child(6) a i{
+    color: #5d7f72;
+}
+
+.submenu > li > a:hover{
+    border-radius: 10px;
+    background-color: #edf9f2;
+    width: 100%;
+}
+
+.submenu > p{
+    font-size: 0.8em;
+    color: #aaa9a9;
+    margin-left: 7px;
+    margin-top: -12px;
+}
+
+nav > ul:first-child > li > ul {
+    width: 21vw;
+} 
+
+nav > ul:first-child > li > ul > li > a:hover::after{
+    content: "✔"; 
+    color: #aaa9a9;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+.fa-bell:after{
+    content: "●";
+    color: transparent;
+    font-size: 0.5vw;
+    background-color: red; 
+    border-radius: 50%;
+    margin-left: -25%;
+}
