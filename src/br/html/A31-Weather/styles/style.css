@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body{
@@ -15,8 +14,8 @@ body{
 }
 
 body > div{
-    height: 95vh;
-    width: 25vw;
+    height: 900px;
+    width: 470px;
     background-color: #000918;
     margin: auto;
     border-radius: 50px;
@@ -27,14 +26,15 @@ body > div > div:first-child{
     background: linear-gradient(to bottom right, #12ADFF, #1377F5);
     margin: 0 auto;
     border-radius: 50px;
+    box-shadow: 0px 9px 9px 0px #073E8D; 
 }
 
 div > div:first-child > div:first-child{
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 12%;
     padding-top: 6%;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 div > div:first-child > div:nth-child(2){
@@ -50,25 +50,26 @@ div > div:first-child > div:nth-child(2) > p:first-child{
     margin: 2% 38%;
 }
 
-h1{
-    font-size: 7em;
-    margin-bottom: -5%;
-}
-
 body > div > div:first-child > div > img{
     margin-bottom: -5%;
-    width: 270px;
+    width: 380px;
 }
 
-h1:after{
+h1{
+    font-size: 9em;
+    margin-bottom: -5%;
+    margin-top: 2%;
+    position: relative;
+}
+
+h1::after{
     content: "°";
     display: block;
-    font-size: 40%;
+    font-size: 60px;
     color: #6DB5F9;
-    position: absolute;
-    top: 37%;
-    left: 54.5%;
-
+    position:absolute;
+    top: 18px;
+    left: 255px;
 }
 
 div > div:first-child > div:nth-child(3){
@@ -83,6 +84,10 @@ div > div:first-child > div:nth-child(3) > div{
 
 div > div:first-child > div:nth-child(3) > div > p{
     color: #6DB5F9;
+}
+
+div > div:first-child > div:nth-child(3) > div:nth-child(2) > i{
+    color: rgb(3, 178, 201);
 }
 
 body > div > div:nth-child(2){
@@ -105,7 +110,7 @@ body > div > div:nth-child(3){
 body > div > div:nth-child(3) > div{
     border: 0.5px #f6fafd solid;
     border-radius: 20%;
-    margin: 1% 1%;
+    margin: 1% 2%;
     font-size: 1.2em;
     padding: 1% 0;
 }
@@ -114,10 +119,8 @@ body > div > div:nth-child(3) > div:hover{
     background: linear-gradient(to bottom right, #12ADFF, #1377F5);
     cursor: pointer;
     transform: scale(1.2);
-    margin: 5% 2%;
 }
 
 body > div > div:nth-child(3) > div > img{
     width: 50%;
 }
-/*  border: 2px red solid; */

@@ -11,6 +11,7 @@ body > div > div:first-child > div > img{
 h1{
     font-size: 4em;
     text-align: start;
+    position: relative;
 }
 
 h1:after{
@@ -19,8 +20,8 @@ h1:after{
     font-size: 0.6em;
     color: #6DB5F9;
     position: absolute;
-    top: 18.5%;
-    left: 52.5%;
+    top: 23px;
+    left: 68px;
 }
 
 body > div > div:nth-child(2){
