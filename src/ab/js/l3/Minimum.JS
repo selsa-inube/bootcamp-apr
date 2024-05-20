@@ -6,6 +6,5 @@ function min(a, b) {
   }
 }
 
-// Probando la función
 console.log(min(0, 10));
 console.log(min(0, -10));
