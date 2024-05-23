@@ -101,8 +101,8 @@ const roads = [
       totalTurns1 += countTurns(state, robot1, memory1);
       totalTurns2 += countTurns(state, robot2, memory2);
     }
-    console.log(`Robot 1 average turns: ${totalTurns1 % tasks}`);
-    console.log(`Robot 2 average turns: ${totalTurns2 % tasks}`);
+    console.log(`Robot 1 average turns: ${totalTurns1 / tasks}`);
+    console.log(`Robot 2 average turns: ${totalTurns2 / tasks}`);
   }
   
   function countTurns(state, robot, memory) {
@@ -157,5 +157,6 @@ const roads = [
     return {direction: route[0], memory: route.slice(1)};
   }
   
-  compareRobots(routeRobot, [], goalOrientedRobot, []);
+  compareRobots(routeRobot, [], goalOrientedRobot, []); 
+
   
