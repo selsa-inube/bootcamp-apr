@@ -13,4 +13,3 @@ for (let y = 0; y < size; y++) {
 }
 
 console.log(board);
-no;
