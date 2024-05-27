@@ -1,17 +1,11 @@
-function countBs(a) {
-  let count = 0;
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === "B") {
-      count++;
-    }
-  }
-  return count;
+function countBs(string) {
+  return countChar(string, "B");
 }
 
-function countChar(a, b) {
+function countChar(string, letter) {
   let count = 0;
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] === b) {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === letter) {
       count++;
     }
   }

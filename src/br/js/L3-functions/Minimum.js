@@ -1,9 +1,5 @@
-function min(a, b) {
-  if (a < b) {
-    return a;
-  } else if (a > b) {
-    return b;
-  }
+const min = (a, b) => {
+  return a < b? a : b;
 }
 
 console.log(min(0, 10));
