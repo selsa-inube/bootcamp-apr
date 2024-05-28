@@ -1,0 +1,35 @@
+<h1>Encabezado con un elemento <span>span</span>.</h1>
+<p>Un párrafo con <span>uno</span>, <span>dos</span> intervalos.</p>
+
+<script>
+    function byTagName(node, tagName) {
+  tagName = tagName.toLowerCase();
+
+  let result = [];
+
+  function findNodes(currentNode) {
+    for (let i = 0; i < currentNode.childNodes.length; i++) {
+      const childNode = currentNode.childNodes[i];
+      if (childNode.nodeType === 1 && childNode.nodeName.toLowerCase() === tagName) {
+      }
+      if (childNode.childNodes.length > 0) {
+        findNodes(childNode);
+      }
+    }
+  }
+
+  findNodes(node);
+
+  return result;
+}
+
+// Ejemplos de uso
+console.log(byTagName(document.body, "h1").length);
+// → 1
+console.log(byTagName(document.body, "span").length);
+// → 3
+let para = document.querySelector("p");
+console.log(byTagName(para, "span").length);
+// → 2
+
+</script>
