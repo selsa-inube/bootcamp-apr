@@ -151,14 +151,35 @@ function compareRobots(robot1, memory1, robot2, memory2) {
   const averageSteps2 = total2 / 100;
 
   const mostEfficientRobot = averageSteps1 < averageSteps2 ? "Robot 1" : "Robot 2";
-  console.log(`El robot 1 hizo ${averageSteps1} pasos en promedio`);
-  console.log(`El robot 2 hizo ${averageSteps2} pasos en promedio`);
+  console.log(`El robot 1 hizo ${parseInt(averageSteps1)} pasos en promedio`);
+  console.log(`El robot 2 hizo ${parseInt(averageSteps2)} pasos en promedio`);
   console.log(`El robot más eficiente fue: ${mostEfficientRobot}`);
 }
 
 
 compareRobots(routeRobot, [], goalOrientedRobot, []);
 
+function findShortestRoute(graph, from, parcels) {
+  let routes = parcels.map(parcel => {
+      if (parcel.place != from) {
+          return { route: findRoute(graph, from, parcel.place), pickUp: true };
+      } else {
+          return { route: findRoute(graph, from, parcel.address), pickUp: false };
+      }
+  });
 
+  function score({route, pickUp}) {
+      return (pickUp ? 0.5 : 1) * route.length;
+  }
 
+  return routes.reduce((a, b) => score(a) < score(b) ? a : b).route;
+}
 
+function smartRobot({place, parcels}, route) {
+  if (route.length == 0) {
+      route = findShortestRoute(roadGraph, place, parcels);
+  }
+  return {direction: route[0], memory: route.slice(1)};
+}
+
+compareRobots(smartRobot, [], goalOrientedRobot, []);
