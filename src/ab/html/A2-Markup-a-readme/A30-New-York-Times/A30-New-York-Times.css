@@ -62,13 +62,13 @@ header i{
 header > div > i:nth-child(2)::after{
     content: "●";
     color: transparent;
-    font-size: 50%;
+    font-size: 40%;
     background-color: red;
     border: 0.5px solid white; 
     border-radius: 50%;
     position: relative;
     margin-left: -25%;
-    top: -0.8em;
+    top: -10px;
 }
 h1{
     font-family: "UnifrakturMaguntia", cursive;
@@ -86,13 +86,8 @@ header button:hover{
     cursor: pointer;
 }
 
-
 header button:first-child{
     border: none;
-}
-
-header > img{
-    width: 15%;
 }
 
 nav{
@@ -229,7 +224,7 @@ article:nth-child(2) > div:nth-child(8){
 }
 
 article > div > img{
-    width: 200px;
+    width: 170px;
 }
 
 article:nth-child(3) > div > div > p:last-child{
