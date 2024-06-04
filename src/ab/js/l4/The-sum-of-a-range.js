@@ -1,14 +1,12 @@
 function range(start, end, step = 1) {
   let array = [];
-  if (step > 0) {
-    for (let i = start; i <= end; i += step) {
-      array.push(i);
-    }
-  } else {
-    for (let i = start; i >= end; i += step) {
-      array.push(i);
-    }
+
+  let direction = Math.sign(end - start);
+
+  for (let i = start; direction * (i - end) <= 0; i += step) {
+    array.push(i);
   }
+
   return array;
 }
 

@@ -8,7 +8,7 @@ function arrayToList(array) {
 
 function listToArray(list) {
   let array = [];
-  for (let node = list; node; node = node.rest) {
+  for (let node = list; node !== null; node = node.rest) {
     array.push(node.value);
   }
   return array;
@@ -19,9 +19,17 @@ function prepend(element, list) {
 }
 
 function nth(list, index) {
-  if (!list) return undefined;
-  else if (index === 0) return list.value;
-  else return nth(list.rest, index - 1);
+  let current = list;
+  let currentIndex = 0;
+
+  while (current !== null) {
+    if (currentIndex === index) {
+      return current.value;
+    }
+    current = current.rest;
+    currentIndex++;
+  }
+  return undefined;
 }
 
 let exampleArray = [1, 2, 3];

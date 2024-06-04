@@ -1,13 +1,13 @@
-function reverseArray(array) {
+function reverseArrayWithIncrement(array) {
   let newArray = [];
-  for (let i = array.length - 1; i >= 0; i--) {
-    newArray.push(array[i]);
+  for (let i = 0; i < array.length; i++) {
+    newArray.unshift(array[i]);
   }
   return newArray;
 }
 
-function reverseArrayInPlace(array) {
-  for (let i = 0; i < Math.floor(array.length / 2); i++) {
+function reverseArrayInPlaceWithDecrement(array) {
+  for (let i = array.length - 1; i >= Math.floor(array.length / 2); i--) {
     let temp = array[i];
     array[i] = array[array.length - 1 - i];
     array[array.length - 1 - i] = temp;
@@ -15,7 +15,8 @@ function reverseArrayInPlace(array) {
   return array;
 }
 
-console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(reverseArrayWithIncrement([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+
 let array = [1, 2, 3, 4, 5];
-reverseArrayInPlace(array);
-console.log(array);
+reverseArrayInPlaceWithDecrement(array);
+console.log(array); // [5, 4, 3, 2, 1]
