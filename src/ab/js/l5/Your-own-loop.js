@@ -1,7 +1,7 @@
 function loop(value, test, update, body) {
-  while (test(value)) {
+  if (test(value)) {
     body(value);
-    value = update(value);
+    loop(update(value), test, update, body);
   }
 }
 
