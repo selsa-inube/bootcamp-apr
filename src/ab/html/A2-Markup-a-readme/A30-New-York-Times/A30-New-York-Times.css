@@ -1,243 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-body{
-    width: 90%;
-    margin: 0 auto;
-    background-color: #F7F7F7;
-    margin-left: 6.5%;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-nav ul:first-child{
-    margin-left: -120px;
-    position: fixed;
-    margin-top: 51%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 3%;
-    align-items: center;
-    justify-content: space-between;
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  margin-left: 6.5%;
 }
 
-nav p:nth-child(2){
-    font-size: 15px;
-    position:fixed;
-    margin-top: -26px;
-}
-nav p:nth-child(1){
-    margin-bottom: 25px;
-}
-
-nav ul:first-child > li > i{
-    color: black;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    cursor: pointer;
-
+nav ul:first-child {
+  margin-left: -120px;
+  position: fixed;
+  margin-top: 51%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 3%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(204, 204, 204);
-    align-items: center;
-    padding: 15px 0;
+nav p:nth-child(2) {
+  font-size: 15px;
+  position: fixed;
+  margin-top: -26px;
+}
+nav p:nth-child(1) {
+  margin-bottom: 25px;
 }
 
-header i{
-    font-size: 1.2em;
-    margin-right: 20px;
-    cursor: pointer;
+nav ul:first-child > li > i {
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-header > div > i:nth-child(2)::after{
-    content: "●";
-    color: transparent;
-    font-size: 40%;
-    background-color: red;
-    border: 0.5px solid white; 
-    border-radius: 50%;
-    position: relative;
-    margin-left: -25%;
-    top: -10px;
-}
-h1{
-    font-family: "UnifrakturMaguntia", cursive;
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  align-items: center;
+  padding: 15px 0;
 }
 
-header button{
-    font-size: 1em;
-    font-weight: bold;
-    padding: 8px 15px;
-    background-color: transparent;
-    border: 1px solid black;
-}
-header button:hover{
-    color: #5e5c5c;
-    cursor: pointer;
+header i {
+  font-size: 1.2em;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
-header button:first-child{
-    border: none;
+header > div > i:nth-child(2)::after {
+  content: "●";
+  color: transparent;
+  font-size: 40%;
+  background-color: red;
+  border: 0.5px solid white;
+  border-radius: 50%;
+  position: relative;
+  margin-left: -25%;
+  top: -10px;
+}
+h1 {
+  font-family: "UnifrakturMaguntia", cursive;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header button {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: 1px solid black;
+}
+header button:hover {
+  color: #5e5c5c;
+  cursor: pointer;
 }
 
-nav  a:hover{
-    color: #222222;
+header button:first-child {
+  border: none;
 }
 
-nav > div > p:first-child{
-    font-weight: bold;
-    width: 75px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav > i{
-    background-color: black;
-    color: white;
-    padding: 30px;
+nav a:hover {
+  color: #222222;
 }
 
-
-ul{
-    list-style: none;
-    display: flex;
-}
-button:hover{
-    cursor: pointer;
-    color:#8fa2a8;
-}
-nav:nth-child(3) > ul{
-    list-style: none;
-    margin: 0 2%;
-    width: 100%;
-    justify-content: space-between;
+nav > div > p:first-child {
+  font-weight: bold;
+  width: 75px;
 }
 
-a{
-    text-decoration: none;
-    color: rgb(167, 166, 166);
-    font-size: 1em;
+nav > i {
+  background-color: black;
+  color: white;
+  padding: 30px;
 }
 
-section{
-    border-bottom: 1px solid rgb(233, 232, 232);
-    padding-bottom: 10px;
+ul {
+  list-style: none;
+  display: flex;
+}
+button:hover {
+  cursor: pointer;
+  color: #8fa2a8;
+}
+nav:nth-child(3) > ul {
+  list-style: none;
+  margin: 0 2%;
+  width: 100%;
+  justify-content: space-between;
 }
 
-section > nav{
-    justify-content: flex-start;
-    margin-top: 15px;
+a {
+  text-decoration: none;
+  color: rgb(167, 166, 166);
+  font-size: 1em;
 }
 
-section > nav > ul > li > a{
-    margin: 0 20px;
+section {
+  border-bottom: 1px solid rgb(233, 232, 232);
+  padding-bottom: 10px;
 }
 
-section > div > article{
-    margin-top: 50px;
+section > nav {
+  justify-content: flex-start;
+  margin-top: 15px;
 }
 
-section > div{
-    display: flex;
+section > nav > ul > li > a {
+  margin: 0 20px;
 }
 
-article{
-    border-right: 1px solid rgb(233, 232, 232);
+section > div > article {
+  margin-top: 50px;
 }
 
-article:last-child{
-    border-right: none;
+section > div {
+  display: flex;
 }
 
-article:first-child > img{
-    width: 50%;
+article {
+  border-right: 1px solid rgb(233, 232, 232);
 }
 
-article > div{
-    display: flex;
-    font-size: 1.1em;
-    align-items: center;
-    margin: 3% 0;
-
+article:last-child {
+  border-right: none;
 }
 
-article > div > button{
-    color: white;
-    background-color: black;
-    border: none;
-    border-radius: 2px;
-    padding: 7px 14px;
-    font-size: 0.75em;
-    margin-right: 2%;
+article:first-child > img {
+  width: 50%;
 }
 
-article > h5{
-    font-size: 2.3em;
+article > div {
+  display: flex;
+  font-size: 1.1em;
+  align-items: center;
+  margin: 3% 0;
 }
 
-article > p{
-    font-size: 1.1em;
-    color: rgb(175, 175, 175);
-    padding: 15px 0;
+article > div > button {
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 2px;
+  padding: 7px 14px;
+  font-size: 0.75em;
+  margin-right: 2%;
 }
 
-article > button{
-    border: none;
-    border-bottom: 1px solid rgb(182, 182, 182);
-    background-color: transparent;
-    color: rgb(182, 182, 182);
-    padding-bottom: 10px;
+article > h5 {
+  font-size: 2.3em;
 }
 
-article > h2{
-    font-size: 1.7em;
-    margin: 10px 0;
+article > p {
+  font-size: 1.1em;
+  color: rgb(175, 175, 175);
+  padding: 15px 0;
 }
 
-article > h3{
-    margin-bottom: 20px;
+article > button {
+  border: none;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  background-color: transparent;
+  color: rgb(182, 182, 182);
+  padding-bottom: 10px;
 }
 
-article:nth-child(2) > div:nth-child(5){
-    padding-top: 50px;  
-}
-.date{
-    font-size: 13px;
+article > h2 {
+  font-size: 1.7em;
+  margin: 10px 0;
 }
 
-article:nth-child(2) > div:nth-child(8){
-    font-size: 50px;
+article > h3 {
+  margin-bottom: 20px;
 }
 
-article > div > img{
-    width: 170px;
+article:nth-child(2) > div:nth-child(5) {
+  padding-top: 50px;
 }
 
-article:nth-child(3) > div > div > p:last-child{
-    color: rgb(175, 175, 175);
-    margin-top: 3%;
-    font-size: 0.9em;
+.date {
+  font-size: 13px;
 }
 
-article:last-child > div{
-    margin-bottom: 5%;
+#icon {
+  font-size: 50px;
+  margin-top: 40px;
+  margin-left: -110px;
+  position: absolute;
 }
 
-section > div > article{
-    width: 38vw;
-    padding: 0 20px;
+article > div > img {
+  width: 170px;
+}
+
+.subscript {
+  color: rgb(175, 175, 175);
+  margin-top: 3%;
+  font-size: 0.9em;
+}
+
+article:last-child > div {
+  margin-bottom: 5%;
+}
+
+section > div > article {
+  width: 38vw;
+  padding: 0 20px;
 }
