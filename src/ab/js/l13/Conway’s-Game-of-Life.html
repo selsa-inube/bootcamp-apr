@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de la Vida de Conway</title>
+    <style>
+      #grid {
+        display: grid;
+        grid-template-columns: repeat(20, 20px);
+        gap: 1px;
+      }
+      .cell {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid"></div>
+    <button id="next">Próxima generación</button>
+
+    <script>
+      const gridSize = 20;
+      const gridElement = document.getElementById("grid");
+
+      // Crear la cuadrícula inicial
+      let grid = [];
+      for (let i = 0; i < gridSize; i++) {
+        let row = [];
+        for (let j = 0; j < gridSize; j++) {
+          const cell = document.createElement("input");
+          cell.type = "checkbox";
+          cell.className = "cell";
+          cell.checked = Math.random() < 0.5;
+          gridElement.appendChild(cell);
+          row.push(cell);
+        }
+        grid.push(row);
+      }
+
+      // Función para contar los vecinos vivos de una célula
+      function countNeighbors(grid, x, y) {
+        let count = 0;
+        for (let i = -1; i <= 1; i++) {
+          for (let j = -1; j <= 1; j++) {
+            if (i === 0 && j === 0) continue;
+            const nx = x + i;
+            const ny = y + j;
+            if (nx >= 0 && nx < gridSize && ny >= 0 && ny < gridSize) {
+              if (grid[nx][ny].checked) {
+                count++;
+              }
+            }
+          }
+        }
+        return count;
+      }
+
+      // Función para avanzar a la siguiente generación
+      function nextGeneration() {
+        const newGrid = [];
+        for (let i = 0; i < gridSize; i++) {
+          const newRow = [];
+          for (let j = 0; j < gridSize; j++) {
+            const neighbors = countNeighbors(grid, i, j);
+            const cell = grid[i][j];
+            const newCell = cell.cloneNode();
+            if (cell.checked) {
+              newCell.checked = neighbors === 2 || neighbors === 3;
+            } else {
+              newCell.checked = neighbors === 3;
+            }
+            newRow.push(newCell);
+          }
+          newGrid.push(newRow);
+        }
+
+        // Actualizar la cuadrícula con la nueva generación
+        grid = newGrid;
+        gridElement.innerHTML = "";
+        for (let i = 0; i < gridSize; i++) {
+          for (let j = 0; j < gridSize; j++) {
+            gridElement.appendChild(grid[i][j]);
+          }
+        }
+      }
+
+      // Event listener para el botón de la próxima generación
+      document.getElementById("next").addEventListener("click", nextGeneration);
+    </script>
+  </body>
+</html>
