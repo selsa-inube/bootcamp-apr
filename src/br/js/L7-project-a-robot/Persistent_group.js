@@ -12,7 +12,7 @@ class PGroup {
 
     delete(value) {
         if (this.has(value)) {
-        return new PGroup(this.members.filter(v => v !== value));
+            return PGroup.from(this.members.filter(member => member !== value));
         }
         return this;
     }
