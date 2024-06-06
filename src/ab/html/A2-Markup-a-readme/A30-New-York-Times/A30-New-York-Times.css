@@ -9,31 +9,20 @@
 
 body {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 120px auto;
   background-color: #f7f7f7;
-  margin-left: 6.5%;
 }
 
 nav ul:first-child {
   margin-left: -120px;
-  position: fixed;
+  position: absolute;
   margin-top: 51%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   background-color: white;
-  width: 3%;
+  width: 50px;
   align-items: center;
   justify-content: space-between;
-}
-
-nav p:nth-child(2) {
-  font-size: 15px;
-  position: fixed;
-  margin-top: -26px;
-}
-nav p:nth-child(1) {
-  margin-bottom: 25px;
 }
 
 nav ul:first-child > li > i {
@@ -51,9 +40,8 @@ header {
   padding: 15px 0;
 }
 
-header i {
+i{
   font-size: 1.2em;
-  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -65,7 +53,7 @@ header > div > i:nth-child(2)::after {
   border: 0.5px solid white;
   border-radius: 50%;
   position: relative;
-  margin-left: -25%;
+  left: -25%;
   top: -10px;
 }
 h1 {
@@ -74,13 +62,13 @@ h1 {
 
 header button {
   font-size: 1em;
-  font-weight: bold;
   padding: 8px 15px;
   background-color: transparent;
-  border: 1px solid black;
+  border: 2px solid black;
 }
+
 header button:hover {
-  color: #5e5c5c;
+  color: #494949;
   cursor: pointer;
 }
 
@@ -96,30 +84,31 @@ nav {
 
 nav a:hover {
   color: #222222;
+  text-decoration: underline;
 }
 
 nav > div > p:first-child {
   font-weight: bold;
-  width: 75px;
+  width: 100px;
 }
 
 nav > i {
   background-color: black;
   color: white;
-  padding: 30px;
+  padding: 25px;
 }
 
 ul {
   list-style: none;
   display: flex;
 }
-button:hover {
+.links:hover {
   cursor: pointer;
-  color: #8fa2a8;
+  color: #242424;
 }
 nav:nth-child(3) > ul {
   list-style: none;
-  margin: 0 2%;
+  margin: 0 30px;
   width: 100%;
   justify-content: space-between;
 }
@@ -154,6 +143,7 @@ section > div {
 
 article {
   border-right: 1px solid rgb(233, 232, 232);
+  margin-bottom: 50px;
 }
 
 article:last-child {
@@ -170,10 +160,13 @@ article > div {
   align-items: center;
   margin: 3% 0;
 }
+h6 {
+  font-size: 20px;
+}
 
-article > div > button {
+.Subtitle span {
   color: white;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border: none;
   border-radius: 2px;
   padding: 7px 14px;
@@ -181,7 +174,8 @@ article > div > button {
   margin-right: 2%;
 }
 
-article > h5 {
+
+article > h3 {
   font-size: 2.3em;
 }
 
@@ -191,7 +185,7 @@ article > p {
   padding: 15px 0;
 }
 
-article > button {
+.links {
   border: none;
   border-bottom: 1px solid rgb(182, 182, 182);
   background-color: transparent;
@@ -199,12 +193,12 @@ article > button {
   padding-bottom: 10px;
 }
 
-article > h2 {
+article > h5 {
   font-size: 1.7em;
   margin: 10px 0;
 }
 
-article > h3 {
+article > h4 {
   margin-bottom: 20px;
 }
 
@@ -233,7 +227,7 @@ article > div > img {
   font-size: 0.9em;
 }
 
-article:last-child > div {
+.Subtitle {
   margin-bottom: 5%;
 }
 
