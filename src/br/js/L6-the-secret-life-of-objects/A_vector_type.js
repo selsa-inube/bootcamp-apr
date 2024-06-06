@@ -1,19 +1,19 @@
 class Vec {
-    constructor(numA, numB) {
-        this.numA = numA;
-        this.numB = numB;
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
     }
 
     plus(other) {
-        return new Vec(this.numA + other.numA, this.numB + other.numB);
+        return new Vec(this.x + other.x, this.y + other.y);
     }
 
     minus(other) {
-        return new Vec(this.numA - other.numA, this.numB - other.numB);
+        return new Vec(this.x - other.x, this.y - other.y);
     }
 
     get length() {
-        return Math.sqrt(this.numA * this.numA + this.numB * this.numB);
+        return Math.sqrt(this.x * this.x + this.y * this.y);
     }
 }
   
