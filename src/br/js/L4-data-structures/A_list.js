@@ -1,33 +1,40 @@
 function arrayToList(array) {
   let list = null;
   for (let i = array.length - 1; i >= 0; i--) {
-    list = { valor: array[i], resto: list };
+    list = { value: array[i], rest: list };
   }
   return list;
 }
 
 function listToArray(list) {
   let array = [];
-  for (let node = list; node; node = node.resto) {
-    array.push(node.valor);
+  for (let node = list; node !== null; node = node.rest) {
+    array.push(node.value);
   }
   return array;
 }
 
-function prepend(valor, list) {
-  return { valor, resto: list };
+
+function prepend(value, list) {
+  return { value, rest: list };
 }
 
 function nth(list, n) {
-  if (!list) return undefined;
-  else if (n === 0) return list.valor;
-  else return nth(list.resto, n - 1);
+  let currentNode = list;
+  for (let i = 0; currentNode !== null; i++) {
+    if (i === n) {
+      return currentNode.value;
+    }
+    currentNode = currentNode.rest;
+  }
+  return undefined;
 }
+
 
 function recursiveNth(list, n) {
   if (!list) return undefined;
-  else if (n === 0) return list.valor;
-  else return recursiveNth(list.resto, n - 1);
+  else if (n === 0) return list.value;
+  else return recursiveNth(list.rest, n - 1);
 }
 
 console.log(arrayToList([10, 20]));
