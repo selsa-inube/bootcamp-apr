@@ -89,7 +89,7 @@ body > div > div > p {
   width: 76vw;
 }
 
-body > div > div > button {
+#button1 {
   background-color: #0361f8;
   color: white;
   border: none;
@@ -100,13 +100,20 @@ body > div > div > button {
   margin-left: 7%;
   margin-right: 3%;
 }
-body > div > div > button:hover {
+#button1:hover {
   background-color: #727272;
   cursor: pointer;
 }
 
-body > div > div > button:nth-child(3) {
-  background-color: #282828;
+#button2 {
+  background-color: #302e2e;
+  margin-left: 1px;
+  border: none;
+  border-radius: 5px;
+  padding: 3% 6%;
+  font-size: 1.4em;
+  margin-top: 6%; 
+  margin-right: 3%;
 }
 
 body > div > div {
@@ -137,6 +144,7 @@ section > p {
   color: #727272;
   font-size: 2em;
   text-align: center;
+  margin-top: 500px;
 }
 
 section > div {
@@ -144,10 +152,12 @@ section > div {
   filter: grayscale(100%);
   justify-content: space-around;
   align-items: center;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 
 section > div > img {
-  width: 10%;
+  width: 130px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -169,16 +179,16 @@ section > div > img {
 
   body > div {
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    flex-direction: column; 
   }
 
   body > div > div > p {
-    font-size: 1em;
+    font-size: 0.9em;
+
   }
 
   h1 {
-    font-size: 2.3em;
+    font-size: 1.8em;
     margin-right: 30px;
     font-family: "Montserrat", sans-serif;
   }
@@ -188,7 +198,7 @@ section > div > img {
   }
 
   .project {
-    top: 58%;
+    top: 480px;
   }
 
   section {
@@ -197,7 +207,25 @@ section > div > img {
 
   section > p {
     font-size: 1em;
+    margin-top: 180px;
   }
+  
+body > div > :first-child {
+  width: auto;
+}
+  
+section > div {
+  display: flex;
+  filter: grayscale(100%);
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+section > div > img {
+  width: 55px;
+}
+
 }
 
 @media only screen and (max-width: 400px) {
