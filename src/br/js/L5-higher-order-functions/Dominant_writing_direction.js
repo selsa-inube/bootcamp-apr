@@ -32,7 +32,7 @@ function dominantDirection(text) {
       let counts = [];
       for (let item of items) {
         let name = groupName(item);
-        let known = counts.findIndex(c => c.name == name);
+        let known = counts.findIndex(current => current.name == name);
         if (known == -1) {
           counts.push({name, count: 1});
         } else {
