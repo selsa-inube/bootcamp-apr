@@ -228,6 +228,7 @@ article:nth-child(2) > div:nth-child(5) {
 
 article > div > img {
   width: 170px;
+  float: left;
 }
 
 .subscript {
