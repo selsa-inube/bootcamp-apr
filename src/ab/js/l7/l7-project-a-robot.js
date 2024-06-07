@@ -116,7 +116,7 @@ function compareRobots(robot1, memory1, robot2, memory2) {
 function countTurns(state, robot, memory) {
   let turns = 0;
   for (;;) {
-    if (state.parcels.length == 0) {
+    if (state.parcels.length === 0) {
       return turns;
     }
     let action = robot(state, memory);
@@ -191,9 +191,10 @@ function efficientRobot({ place, parcels }, route) {
       }
     });
 
-    route = routes.reduce((a, b) =>
-      a.route.length < b.route.length ? a : b,
+    let shortestRoute = routes.reduce((shortest, current) =>
+      shortest.route.length < current.route.length ? shortest : current
     ).route;
+    
   }
   return { direction: route[0], memory: route.slice(1) };
 }
