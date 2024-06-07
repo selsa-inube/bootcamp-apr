@@ -2,26 +2,26 @@
 <p>Un párrafo con <span>uno</span>, <span>dos</span> intervalos.</p>
 
 <script>
-    function byTagName(node, tagName) {
-  tagName = tagName.toLowerCase();
 
-  let result = [];
-
-  function findNodes(currentNode) {
-    for (let i = 0; i < currentNode.childNodes.length; i++) {
-      const childNode = currentNode.childNodes[i];
+  function findNodes(currentNode, tagName) {
+  let nodes = [];
+  
+  function recurse(node) {
+    for (let i = 0; i < node.childNodes.length; i++) {
+      const childNode = node.childNodes[i];
       if (childNode.nodeType === 1 && childNode.nodeName.toLowerCase() === tagName) {
+        nodes.push(childNode);
       }
       if (childNode.childNodes.length > 0) {
-        findNodes(childNode);
+        recurse(childNode);
       }
     }
   }
-
-  findNodes(node);
-
-  return result;
+  
+  recurse(currentNode);
+  return nodes;
 }
+
 
 // Ejemplos de uso
 console.log(byTagName(document.body, "h1").length);
