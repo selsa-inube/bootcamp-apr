@@ -33,13 +33,18 @@
 
           data.forEach(obj => {
             const tr = document.createElement('tr');
+            let columnIndex = 0;
             for (let key in obj) {
               const td = document.createElement('td');
               td.textContent = obj[key];
+              if (columnIndex === 2){
+                td.style.color = 'blue'
+              }
               if (typeof obj[key] === 'number') {
                 td.style.textAlign = 'right';
               }
               tr.appendChild(td);
+              columnIndex++;
             }
             table.appendChild(tr);
           });
