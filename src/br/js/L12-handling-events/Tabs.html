@@ -14,27 +14,31 @@
     <script>
         function asTabs(node) {
             const tabs = Array.from(node.children);
+            const buttonsContainer = document.createElement('div');
 
                 tabs.forEach((tab, index) => {
                 const button = document.createElement('button');
                 button.textContent = tab.getAttribute('data-tabname');
                 button.addEventListener('click', () => selectTab(index));
-
-                node.insertBefore(button, node.firstChild);
-
+                
+                buttonsContainer.appendChild(button); 
                 if (index !== 0) {
-                tab.style.display = 'none';
+                    tab.style.display = 'none';
                 }
             });
+
+        node.insertBefore(buttonsContainer, node.firstChild);
 
         function selectTab(selectedIndex) {
             tabs.forEach((tab, index) => {
                 if (index === selectedIndex) {
-                tab.style.display = '';
-                node.children[index].style.fontWeight = 'bold';
+                    tab.style.display = '';
+                    node.children[index + 1].style.fontWeight = 'bold';
+                    buttonsContainer.children[index].style.backgroundColor = 'greenyellow';
                 } else {
-                tab.style.display = 'none';
-                node.children[index].style.fontWeight = 'normal';
+                    tab.style.display = 'none';
+                    node.children[index + 1].style.fontWeight = 'normal';
+                    buttonsContainer.children[index].style.backgroundColor = '';
                 }
             });
           }
