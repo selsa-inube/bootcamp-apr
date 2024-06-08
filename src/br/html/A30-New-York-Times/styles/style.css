@@ -12,23 +12,22 @@ body{
 }
 
 ul:first-child{
-    margin-left: -6.5%;
+    left: 0;
     position: fixed;
     height: 100%;
-    display: flex;
     flex-direction: column;
     background-color: white;
-    width: 3%;
+    width: 60px;
     align-items: center;
     justify-content: space-between;
 }
 
-ul:first-child > li > a > i{
+ul:first-child i{
     color: black;
     margin: 20px 0;
 }
 
-header{
+.upper-line{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(204, 204, 204);
@@ -36,12 +35,13 @@ header{
     padding: 1% 0;
 }
 
-header i{
+
+.upper-line i{
+    margin-right: 30px;
     font-size: 1.2em;
-    margin-right: 20px;
 }
 
-header > div > i:nth-child(2)::after{
+i:nth-child(2)::after{
     content: "●";
     color: transparent;
     font-size: 50%;
@@ -49,7 +49,7 @@ header > div > i:nth-child(2)::after{
     border: 0.5px solid white; 
     border-radius: 50%;
     position: relative;
-    margin-left: -25%;
+    left: -25%;
     top: -0.8em;
 }
 
@@ -65,14 +65,20 @@ header button:first-child{
     border: none;
 }
 
-header > img{
-    width: 15%;
+header button:hover{
+    transform: scale(1.1);
+    font-size: 1.01em;
+}
+
+header img{
+    width: 250px;
 }
 
 nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
+
 }
 
 nav > div > p:first-child{
@@ -84,48 +90,54 @@ nav > i{
     color: white;
     padding: 30px;
 }
+
 ul{
     list-style: none;
     display: flex;
+    
 }
 
-nav:nth-child(3) > ul{
+nav:nth-child(2) > ul{
     list-style: none;
     margin: 0 2%;
     width: 100%;
     justify-content: space-between;
 }
 
+a:hover{
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+
 a{
     text-decoration: none;
-    color: rgb(167, 166, 166);
-    font-size: 1.2em;
+    color: #969696;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-section{
+main > div{
     border-bottom: 1px solid rgb(233, 232, 232);
     padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 3%;
 }
 
-section > nav{
-    justify-content: flex-start;
+main nav{
     margin-top: 2%;
 }
 
-section > nav > ul > li > a{
+nav a{
     margin: 0 20px;
 }
 
-section > div > article{
+main > div > article{
     margin-top: 3%;
-}
-
-section > div{
-    display: flex;
 }
 
 article{
     border-right: 1px solid rgb(233, 232, 232);
+
 }
 
 article:last-child{
@@ -136,7 +148,7 @@ article:first-child > img{
     width: 50%;
 }
 
-article:nth-child(3) > div, .detail_and_date{
+.detail_and_date{
     display: flex;
     font-size: 1.1em;
     align-items: center;
@@ -166,9 +178,13 @@ article:first-child h2{
 .continue{
     border: none;
     border-bottom: 1px solid rgb(182, 182, 182);
-    background-color: transparent;
     color: rgb(182, 182, 182);
     padding-bottom: 1%;
+    font-size: 0.8em;
+}
+
+.continue:hover{
+    color: #141316;
 }
 
 .news > h2{
@@ -180,77 +196,48 @@ article:first-child h2{
     margin-bottom: 4%;
 }
 
-article > div:nth-child(4){
+article:nth-child(2) > div:nth-child(4){
     padding-top: 2em;
     display: flex;
 }
 
-.point:after{
-    content: "oo";
-    color: transparent;
-    font-size: 0.5em;
-    background-color: rgb(163, 163, 163);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.point:first-child:after{
-    background-color: white ;
-    border: 1px solid black;
-}
-
 .point{
+    font-size: 0.6em;
+    color: #969696;
     padding: 1%;
+}
+
+.point:first-child{
+    color: black;
 }
 
 .news:nth-child(3){
     padding-top: 8%;  
 }
 
-.foward > img{
-    width: 35%;
-    padding-left: 6%;
+.fast_news img{
+    float: right;
+    width: 30%;
 }
 
-.foward p:last-child{
+.fast_news h3{
+    font-size: 1.05em;
+    font-weight: 400;
+    padding-bottom: 10px;
+    float: left;
+    width: 70%;
+}
+
+.fast_news p {
     color: rgb(175, 175, 175);
-    margin-top: 3%;
-    font-size: 0.9em;
+    font-size: 1em;
+    width: 70%;
 }
 
 article:last-child > div{
     margin-bottom: 5%;
 }
 
-section > div > article{
-    width: 38vw;
-    padding: 0 2%;
-}
-
-section > div > article:last-child{
-    width: 24vw;
-}
-
-.foward{
-    padding-right: 0;
-}
-
-section:nth-child(5) > div{
-    justify-content: space-between;
-}
-
-section:nth-child(5) > div > div{
-    padding: 4% 8%;
-}
-
-.graphic:nth-child(1), .graphic:nth-child(4), .graphic:nth-child(6){
-    background-color: #CA495E;
-}
-
-.graphic:nth-child(2), .graphic:nth-child(3){
-    background-color: #5C8E5B;
-}
-
-.graphic:nth-child(5){
-    background-color: #141316;
+section .graphic{
+    display: flex;
 }
