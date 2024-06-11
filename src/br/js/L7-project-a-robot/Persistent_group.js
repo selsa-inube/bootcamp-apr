@@ -22,6 +22,10 @@ class PGroup {
     }
 
     static empty = new PGroup([]);
+
+    static from(array) { 
+        return new PGroup(array);
+    }
 }
 
 let a = PGroup.empty.add("a");
