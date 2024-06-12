@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globo Inflable</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-size: 20px;
+    }
+
+    #globo {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div id="globo">🎈</div>
+
+<script>
+  const globo = document.getElementById("globo");
+  let tamaño = 20;
+
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowUp") {
+      tamaño *= 1.1; 
+
+      if (tamaño >= 100) { 
+        globo.innerHTML = "💥";
+        document.removeEventListener("keydown", handleKeyDown); 
+      } else {
+        globo.style.fontSize = `${tamaño}px`;
+      }
+    } else if (event.key === "ArrowDown") {
+      tamaño *= 0.9;
+      globo.style.fontSize = `${tamaño}px`;
+    }
+  };
+
+  document.addEventListener("keydown", handleKeyDown);
+</script>
+
+</body>
+</html>

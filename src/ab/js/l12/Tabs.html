@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Interface</title>
+    <style>
+        .tab-button {
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            margin-right: 5px;
+        }
+        .tab-button.active {
+            background-color: #ddd;
+            border-bottom: none;
+        }
+        .tab-content {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <panel-de-pestanas>
+        <div data-tabname="uno">Contenido de la pestaña uno</div>
+        <div data-tabname="dos">Contenido de la pestaña dos</div>
+        <div data-tabname="tres">Contenido de la pestaña tres</div>
+    </panel-de-pestanas>
+
+    <script>
+        function asTabs(node) {
+            const tabButtons = document.createElement('div');
+            const children = Array.from(node.children);
+
+            children.forEach((child, index) => {
+                const button = document.createElement('button');
+                button.textContent = child.getAttribute('data-tabname');
+                button.classList.add('tab-button');
+                if (index === 0) {
+                    button.classList.add('active');
+                    child.classList.add('active');
+                }
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                    button.classList.add('active');
+                    child.classList.add('active');
+                });
+                tabButtons.appendChild(button);
+                child.classList.add('tab-content');
+            });
+
+            node.prepend(tabButtons);
+        }
+
+        asTabs(document.querySelector('panel-de-pestanas'));
+    </script>
+</body>
+</html>
