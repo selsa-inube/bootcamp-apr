@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+</head>
+<body>
+    <tab-panel>
+        <div data-tabname="one">Tab one</div>
+        <div data-tabname="two">Tab two</div>
+        <div data-tabname="three">Tab three</div>
+      </tab-panel>
+    <script>
+        function asTabs(node) {
+            const tabs = Array.from(node.children);
+            const buttonsContainer = document.createElement('div');
+
+                tabs.forEach((tab, index) => {
+                const button = document.createElement('button');
+                button.textContent = tab.getAttribute('data-tabname');
+                button.addEventListener('click', () => selectTab(index));
+                
+                buttonsContainer.appendChild(button); 
+                if (index !== 0) {
+                    tab.style.display = 'none';
+                }
+            });
+
+        node.insertBefore(buttonsContainer, node.firstChild);
+
+        function selectTab(selectedIndex) {
+            tabs.forEach((tab, index) => {
+                if (index === selectedIndex) {
+                    tab.style.display = '';
+                    node.children[index + 1].style.fontWeight = 'bold';
+                    buttonsContainer.children[index].style.backgroundColor = 'greenyellow';
+                } else {
+                    tab.style.display = 'none';
+                    node.children[index + 1].style.fontWeight = 'normal';
+                    buttonsContainer.children[index].style.backgroundColor = '';
+                }
+            });
+          }
+        }
+
+        asTabs(document.querySelector("tab-panel"));
+    </script>
+</body>
+</html>

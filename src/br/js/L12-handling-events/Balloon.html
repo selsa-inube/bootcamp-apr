@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+</head>
+<body>
+    <p id="balloon" onclick="inflateBalloon()">🎈</p>
+
+    <script>
+        let size = 20; 
+        const balloon = document.getElementById('balloon');
+    
+        function updateSize() {
+            balloon.style.fontSize = size + 'px';
+            if (size >= 200) {
+                balloon.textContent = '💥';
+                document.removeEventListener('keydown', handleKeys);
+            }
+        }
+    
+        function inflateBalloon() {
+            size *= 1.1; 
+            updateSize();
+        }
+    
+        function deflateBalloon() {
+            size /= 1.1; 
+            updateSize();
+        }
+    
+        function handleKeys(event) {
+            if (event.key === 'ArrowUp') {
+                inflateBalloon();
+            } else if (event.key === 'ArrowDown') {
+                deflateBalloon();
+            }
+        }
+    
+        document.addEventListener('keydown', handleKeys);
+    </script>
+</body>
+</html>
