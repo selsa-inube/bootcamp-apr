@@ -1,11 +1,46 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Article from './components/Secction/Article';
+import BusinessNav from './components/BusinessNav/BusinessNav';
+import MarketSnapshotNav from './components/MarketSnapshotNav/MarketSnapshotNav';
+import article1Image from './assets/article1.png';
+import fast1Image from './assets/fast1.png';
+import fast2Image from './assets/fast2.png';
+import fast3Image from './assets/fast3.png';
 
-function App() {
+const AppContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+`;
 
+const Section = styled.section`
+  display: grid;
+  grid-template-columns: 1.7fr 1.4fr 1fr;
+  gap: 30px;
+`;
+
+const App = () => {
+  const mainNavItems = [
+    { href: '#', text: 'World' },
+    { href: '#', text: 'Politics' },
+    { href: '#', text: 'Business' },
+    { href: '#', text: 'Opinion' },
+    { href: '#', text: 'Tech' },
+    { href: '#', text: 'Science' },
+    { href: '#', text: 'Sports' },
+    { href: '#', text: 'Arts' },
+    { href: '#', text: 'Books' },
+    { href: '#', text: 'Style' },
+    { href: '#', text: 'Food' },
+    { href: '#', text: 'Travel' },
+    { href: '#', text: 'Magazine' },
+  ];
 
   return (
-    <>
+    <AppContainer>
       <head>
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -13,229 +48,69 @@ function App() {
         />
       </head>
       <body>
-        <nav>
-          <ul>
-            <li>
-              <i className="bx bx-dots-horizontal-rounded" />
-            </li>
-            <li>
-              <i className="bx bx-transfer-alt bx-rotate-90" />
-            </li>
-            <li>
-              <i className="bx bxs-moon" />
-            </li>
-          </ul>
-        </nav>
-        <header>
+        <Header />
+        <Navbar items={mainNavItems} />
+        <BusinessNav />
+        <Section>
+          <Article
+            image={article1Image}
+            subtitle="TECH FIX"
+            date="May 20, 2020"
+            title="Everything You Need to Know About Slow Internet Speeds"
+            content="Our Crummy connections are the biggest tech headache in the pandemic. Here's a comprehensive guide to do about them."
+          />
           <div>
-            <i className="bx bx-search-alt" />
-            <i className="bx bxs-bell" />
+            <Article
+              sectionTitle="Latest News"
+              subtitle="The upsho"
+              date="May 19, 2020"
+              title="A Wave of Small Business Closures Is on the Way. Can Washington Stop It?"
+              smallTitle 
+            />
+            <Article
+              subtitle="NEW ANALYSIS"
+              date="May 19, 2020"
+              title="Coronavirus Shut Down the 'Experience Economy.' Can It Come Back?"   
+              showIcon={true}
+              smallTitle 
+            />
           </div>
-          <h1>The New York Times</h1>
           <div>
-            <button>SIGN IN</button>
-            <button>SUBSCRIBE</button>
+            <Article
+              sectionTitle="Fast Forward"
+              image={fast1Image}
+              title="Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates"
+              date="May 20, 2020"
+              content="Live stock Market News Darling the Coronavirus Pandemic."
+              smallImage 
+              smallestOverall 
+              hideReadMore
+            />
+            <Article
+              image={fast2Image}
+              title="Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates"
+              date="May 20, 2020"
+              content="Live stock Market News Darling the Coronavirus Pandemic."
+              smallImage 
+              smallestOverall 
+              hideReadMore
+            />
+            <Article
+              image={fast3Image}
+              title="Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates"
+              date="May 20, 2020"
+              content="Live stock Market News Darling the Coronavirus Pandemic."
+              smallImage 
+              smallestOverall 
+              hideReadMore
+              showShowAllLink={true} 
+            />
           </div>
-        </header>
-        <nav>
-          <div>
-            <p>Thursday</p>
-            <time className="date">May 21,2020</time>
-          </div>
-          <ul>
-            <li>
-              <a href="#">World</a>
-            </li>
-            <li>
-              <a href="#">Politics</a>
-            </li>
-            <li>
-              <a href="#">Business</a>
-            </li>
-            <li>
-              <a href="#">Opinion</a>
-            </li>
-            <li>
-              <a href="#">Tech</a>
-            </li>
-            <li>
-              <a href="#">Science</a>
-            </li>
-            <li>
-              <a href="#">Sports</a>
-            </li>
-            <li>
-              <a href="#">Arts</a>
-            </li>
-            <li>
-              <a href="#">Books</a>
-            </li>
-            <li>
-              <a href="#">Style</a>
-            </li>
-            <li>
-              <a href="#">Food</a>
-            </li>
-            <li>
-              <a href="#">Travel</a>
-            </li>
-            <li>
-              <a href="#">Magazine</a>
-            </li>
-          </ul>
-          <i className="bx bx-dots-horizontal-rounded" />
-        </nav>
-        <nav>
-          <h2>Business</h2>
-          <ul>
-            <li>
-              <a href="#">Tech</a>
-            </li>
-            <li>
-              <a href="#">Econ</a>
-            </li>
-            <li>
-              <a href="#">Media</a>
-            </li>
-            <li>
-              <a href="#">Money</a>
-            </li>
-            <li>
-              <a href="#">DealBook</a>
-            </li>
-          </ul>
-        </nav>
-        {/* segunda parte */}
-        <section>
-          <div>
-            <article>
-              <img
-                alt="yellow background and a people jumped"
-                src="img/article1.png"
-              />
-              <div className="Subtitle">
-                <span>TECH FIX</span>
-                <time className="date">May 20,2020</time>
-              </div>
-              <h3>Everything You Need to Know About Slow Internet Speeds</h3>
-              <p>
-                Our Crummy connections are the biggest tech headache in the
-                pandemic. Here's a comprehensive guide to do about them.
-              </p>
-              <a className="links" href="#">
-                Continue Reading
-              </a>
-            </article>
-            <article>
-              <h4>Latest News</h4>
-              <div className="Subtitle">
-                <span>The upshot</span>
-                <time className="date">May 19, 2020</time>
-              </div>
-              <h5>
-                A Wave of Small Business Closures Is on the Way. Can Washington
-                Stop It?
-              </h5>
-              <a className="links" href="#">
-                Continue Reading
-              </a>
-              <div className="Subtitle">
-                <span>NEW ANALYSIS</span>
-                <time className="date">May 19, 2020</time>
-              </div>
-              <h5>
-                Coronavirus Shut Down the 'Experience Economy.' Can It Come
-                Back?
-              </h5>
-              <a className="links" href="#">
-                Continue Reading
-              </a>
-              <br />
-              <i className="bx bx-circle icon" />
-              <i className="bx bxs-circle icon" />
-              <i className="bx bxs-circle icon" />
-            </article>
-            <article>
-              <h4>Fast Forward</h4>
-              <div>
-                <div>
-                  <h6>
-                    Another Grim Tally of U.S. Unemployement Is Exoected: Live
-                    Business Updates
-                  </h6>
-                  <img
-                    alt="an alley somewhere in the world"
-                    src="img/fast1.png"
-                  />
-                  <p className="subscript">
-                    Live stock Market News Darling the Coronavirus Pandemic
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <h6>
-                    Another Grim Tally of U.S. Unemployement Is Exoected: Live
-                    Business Updates
-                  </h6>
-                  <img
-                    alt="a building located in the United States"
-                    src="img/fast2.png"
-                  />
-                  <p className="subscript">
-                    Live stock Market News Darling the Coronavirus Pandemic
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <h6>
-                    Another Grim Tally of U.S. Unemployement Is Exoected: Live
-                    Business Updates
-                  </h6>
-                  <img
-                    alt="thoughtful journalist about the topic being talked about"
-                    src="img/fast3.png"
-                  />
-                  <p className="subscript">
-                    Live stock Market News Darling the Coronavirus Pandemic
-                  </p>
-                </div>
-              </div>
-              <a className="links" href="#">
-                Show All
-              </a>
-            </article>
-          </div>
-        </section>
-        <section>
-          <nav>
-            <div>
-              <p>MARKET SNAPSHOT</p>
-              <time className="date">6:07 AM</time>
-            </div>
-            <ul>
-              <li>
-                <a href="#">Features</a>
-              </li>
-              <li>
-                <a href="#">Americas</a>
-              </li>
-              <li>
-                <a href="#">Europe</a>
-              </li>
-              <li>
-                <a href="#">Asia</a>
-              </li>
-              <li>
-                <a href="#">Commodities</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
+        </Section>
+        <MarketSnapshotNav />
       </body>
-    </>
+    </AppContainer>
   );
-}
+};
 
 export default App;
