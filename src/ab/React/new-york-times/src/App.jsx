@@ -1,8 +1,8 @@
-import { useState } from "react";
-import "./App.css";
+import React from 'react';
+import styled from "styled-components";
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
@@ -105,6 +105,7 @@ function App() {
             </li>
           </ul>
         </nav>
+        {/* segunda parte */}
         <section>
           <div>
             <article>
