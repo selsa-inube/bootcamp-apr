@@ -13,7 +13,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  margin-left: 40px;
+  margin-left: 45px;
   margin-right: 30px;
 `;
 

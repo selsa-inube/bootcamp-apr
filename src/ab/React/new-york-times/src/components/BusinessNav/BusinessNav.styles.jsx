@@ -10,11 +10,11 @@ export const BusinessNavList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: flex-start;
-  width: 96rem;
+  width: 100rem;
 `;
 
 export const BusinessNavItem = styled.li`
-  margin-left: 35px;
+  margin-left: 30px;
 `;
 
 export const BusinessNavItemLink = styled.a`
