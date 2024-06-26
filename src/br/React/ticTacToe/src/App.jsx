@@ -1,11 +1,21 @@
-import './App.css'
-import { useState } from 'react';
+import { useState } from "react";
+import {
+  SquareButton,
+  BoardRow,
+  Status,
+  GameContainer,
+  GameInfo,
+} from "./style";
+import GlobalStyle from "./global";
 
 function Square({ value, onSquareClick, isWinningSquare }) {
   return (
-    <button className={`square ${isWinningSquare ? 'winning-square' : ''}`} onClick={onSquareClick}>
+    <SquareButton
+      className={isWinningSquare ? "winning-square" : ""}
+      onClick={onSquareClick}
+    >
       {value}
-    </button>
+    </SquareButton>
   );
 }
 
@@ -16,7 +26,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
 
     const nextSquares = squares.slice();
-    
+
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
@@ -33,7 +43,7 @@ function Board({ xIsNext, squares, onPlay }) {
   let status;
   if (winner) {
     status = "Ganador: " + winner;
-  } else if (squares.every(square => square !== null)) {
+  } else if (squares.every((square) => square !== null)) {
     status = "Empate";
   } else {
     status = "Siguiente jugador: " + (xIsNext ? "X" : "O");
@@ -50,29 +60,34 @@ function Board({ xIsNext, squares, onPlay }) {
           value={squares[squareIndex]}
           onSquareClick={() => handleClick(squareIndex)}
           isWinningSquare={winningSquares.includes(squareIndex)}
-        />
+        />,
       );
     }
-    boardRows.push(<div key={row} className="board-row">{squaresInRow}</div>);
+    boardRows.push(<BoardRow key={row}>{squaresInRow}</BoardRow>);
   }
 
   return (
     <>
-      <div className="status">{status}</div>
+      <Status>{status}</Status>
       {boardRows}
     </>
   );
 }
 
 export default function Game() {
-  const [history, setHistory] = useState([{ squares: Array(9).fill(null), location: null }]);
+  const [history, setHistory] = useState([
+    { squares: Array(9).fill(null), location: null },
+  ]);
   const [currentMove, setCurrentMove] = useState(0);
   const [isAscending, setIsAscending] = useState(true);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove].squares;
 
   function handlePlay(nextSquares, moveLocation) {
-    const nextHistory = [...history.slice(0, currentMove + 1), { squares: nextSquares, location: moveLocation }];
+    const nextHistory = [
+      ...history.slice(0, currentMove + 1),
+      { squares: nextSquares, location: moveLocation },
+    ];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }
@@ -90,13 +105,18 @@ export default function Game() {
   const moves = sortedHistory.map((step, move) => {
     const actualMove = isAscending ? move : history.length - 1 - move;
     const desc = actualMove
-      ? `Ir al movimiento #${actualMove} (${Math.floor(step.location / 3) + 1}, ${step.location % 3 + 1})`
-      : 'Ir al inicio del juego';
+      ? `Ir al movimiento #${actualMove} (${
+          Math.floor(step.location / 3) + 1
+        }, ${(step.location % 3) + 1})`
+      : "Ir al inicio del juego";
 
     if (actualMove === currentMove) {
       return (
         <li key={actualMove}>
-          <span>Estás en el movimiento #{actualMove} ({Math.floor(step.location / 3) + 1}, {step.location % 3 + 1})</span>
+          <span>
+            Estás en el movimiento #{actualMove} (
+            {Math.floor(step.location / 3) + 1}, {(step.location % 3) + 1})
+          </span>
         </li>
       );
     } else {
@@ -109,19 +129,26 @@ export default function Game() {
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
-        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      </div>
-      <div className="game-info">
-        <div>
-          <button onClick={toggleSortOrder}>
-            {isAscending ? 'Orden Descendente' : 'Orden Ascendente'}
-          </button>
+    <>
+      <GlobalStyle />
+      <GameContainer>
+        <div className="game-board">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
         </div>
-        <ol>{moves}</ol>
-      </div>
-    </div>
+        <GameInfo>
+          <div>
+            <button onClick={toggleSortOrder}>
+              {isAscending ? "Orden Descendente" : "Orden Ascendente"}
+            </button>
+          </div>
+          <ol>{moves}</ol>
+        </GameInfo>
+      </GameContainer>
+    </>
   );
 }
 
@@ -134,7 +161,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
