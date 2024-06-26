@@ -1,14 +1,9 @@
 // ArticleStyles.js
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const ArticleContainer = styled.article`
   border-right: 1px solid rgb(233, 232, 232);
-  margin-bottom: 50px;
   margin-top: 50px;
-
-  &:last-child {
-    border-right: none;
-  }
 `;
 
 export const Image = styled.img`
@@ -18,8 +13,9 @@ export const Image = styled.img`
   ${(props) =>
     props.small &&
     css`
-      width: 27%;
+      width: 35%;
       float: right;
+      margin-top: 10px;
       margin-left: 10px;
     `}
 `;
@@ -40,9 +36,9 @@ export const Category = styled.span`
 
 export const ArticleTitle = styled.h3`
   font-size: ${(props) => {
-    if (props.smallTitle) return '1.7em';
-    if (props.smallestOverall) return '1em';
-    return '2.3em';
+    if (props.smallTitle) return "1.7em";
+    if (props.smallestOverall) return "1em";
+    return "2.3em";
   }};
   margin-bottom: 10px;
 `;
@@ -61,7 +57,7 @@ export const ReadMore = styled.a`
   text-decoration: none;
   color: #242424;
   border-bottom: 1px solid rgb(182, 182, 182);
-  display: ${(props) => (props.hideReadMore ? 'none' : 'inline')};
+  display: ${(props) => (props.hideReadMore ? "none" : "inline")};
 
   &:hover {
     color: #aaaaaa;
@@ -84,4 +80,3 @@ export const SectionTitle = styled.h4`
   font-size: 1em;
   margin-bottom: 20px;
 `;
-  

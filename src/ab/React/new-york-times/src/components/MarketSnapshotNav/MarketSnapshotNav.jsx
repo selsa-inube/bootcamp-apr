@@ -1,13 +1,20 @@
-// MarketSnapshotNav/MarketSnapshotNav.js
-import React from 'react';
+import React from "react";
 import {
   MarketSnapshotNavContainer,
   MarketSnapshotNavList,
   MarketSnapshotNavItem,
-  MarketLink
-} from './MarketSnapshotNavStyles';
+  MarketLink,
+} from "./MarketSnapshotNavStyles";
 
 const MarketSnapshotNav = () => {
+  const snapshotItems = [
+    { text: "Features", link: "#" },
+    { text: "Americas", link: "#" },
+    { text: "Europe", link: "#" },
+    { text: "Asia", link: "#" },
+    { text: "Commodities", link: "#" },
+  ];
+
   return (
     <MarketSnapshotNavContainer>
       <div>
@@ -15,21 +22,11 @@ const MarketSnapshotNav = () => {
         <time className="date">6:07 AM</time>
       </div>
       <MarketSnapshotNavList>
-        <MarketSnapshotNavItem>
-          <MarketLink href="#">Features</MarketLink>
-        </MarketSnapshotNavItem>
-        <MarketSnapshotNavItem>
-          <MarketLink href="#">Americas</MarketLink>
-        </MarketSnapshotNavItem>
-        <MarketSnapshotNavItem>
-          <MarketLink href="#">Europe</MarketLink>
-        </MarketSnapshotNavItem>
-        <MarketSnapshotNavItem>
-          <MarketLink href="#">Asia</MarketLink>
-        </MarketSnapshotNavItem>
-        <MarketSnapshotNavItem>
-          <MarketLink href="#">Commodities</MarketLink>
-        </MarketSnapshotNavItem>
+        {snapshotItems.map((item) => (
+          <MarketSnapshotNavItem key={item.text}>
+            <MarketLink href={item.link}>{item.text}</MarketLink>
+          </MarketSnapshotNavItem>
+        ))}
       </MarketSnapshotNavList>
     </MarketSnapshotNavContainer>
   );
