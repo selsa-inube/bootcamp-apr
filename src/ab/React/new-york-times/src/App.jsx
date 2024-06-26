@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Article from "./components/Section/Article";
+import Article from "./components/Secction/Article";
 import BusinessNav from "./components/BusinessNav/BusinessNav";
 import MarketSnapshotNav from "./components/MarketSnapshotNav/MarketSnapshotNav";
 import article1Image from "./assets/article1.png";
@@ -22,6 +22,70 @@ const Section = styled.section`
   gap: 30px;
 `;
 
+const SectionTitle = styled.h2`
+  font-size: 1.2rem;
+  position: absolute;
+`;
+
+const articlesData = [
+  {
+    sectionTitle: "Latest News",
+    articles: [
+      {
+        subtitle: "The upsho",
+        date: "May 19, 2020",
+        title:
+          "A Wave of Small Business Closures Is on the Way. Can Washington Stop It?",
+        smallTitle: true,
+      },
+      {
+        subtitle: "NEW ANALYSIS",
+        date: "May 19, 2020",
+        title:
+          "Coronavirus Shut Down the 'Experience Economy.' Can It Come Back?",
+        showIcon: true,
+        smallTitle: true,
+      },
+    ],
+  },
+  {
+    sectionTitle: "Fast Forward",
+    articles: [
+      {
+        image: fast1Image,
+        title:
+          "Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates",
+        date: "May 20, 2020",
+        content: "Live stock Market News Darling the Coronavirus Pandemic.",
+        smallImage: true,
+        smallestOverall: true,
+        hideReadMore: true,
+      },
+      {
+        image: fast2Image,
+        title:
+          "Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates",
+        date: "May 20, 2020",
+        content: "Live stock Market News Darling the Coronavirus Pandemic.",
+        smallImage: true,
+        smallestOverall: true,
+        hideReadMore: true,
+      },
+      {
+        image: fast3Image,
+        title:
+          "Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates",
+        date: "May 20, 2020",
+        content: "Live stock Market News Darling the Coronavirus Pandemic.",
+        smallImage: true,
+        smallestOverall: true,
+        hideReadMore: true,
+        showShowAllLink: true,
+      },
+    ],
+  },
+];
+
 const App = () => {
   const mainNavItems = [
     { href: "#", text: "World" },
@@ -39,65 +103,6 @@ const App = () => {
     { href: "#", text: "Magazine" },
   ];
 
-  const articles = [
-    {
-      image: article1Image,
-      subtitle: "TECH FIX",
-      date: "May 20, 2020",
-      title: "Everything You Need to Know About Slow Internet Speeds",
-      content:
-        "Our Crummy connections are the biggest tech headache in the pandemic. Here's a comprehensive guide to do about them.",
-    },
-    {
-      sectionTitle: "Latest News",
-      subtitle: "The upsho",
-      date: "May 19, 2020",
-      title:
-        "A Wave of Small Business Closures Is on the Way. Can Washington Stop It?",
-      smallTitle: true,
-    },
-    {
-      subtitle: "NEW ANALYSIS",
-      date: "May 19, 2020",
-      title:
-        "Coronavirus Shut Down the 'Experience Economy.' Can It Come Back?",
-      showIcon: true,
-      smallTitle: true,
-    },
-    {
-      sectionTitle: "Fast Forward",
-      image: fast1Image,
-      title:
-        "Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates",
-      date: "May 20, 2020",
-      content: "Live stock Market News Darling the Coronavirus Pandemic.",
-      smallImage: true,
-      smallestOverall: true,
-      hideReadMore: true,
-    },
-    {
-      image: fast2Image,
-      title:
-        "Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates",
-      date: "May 20, 2020",
-      content: "Live stock Market News Darling the Coronavirus Pandemic.",
-      smallImage: true,
-      smallestOverall: true,
-      hideReadMore: true,
-    },
-    {
-      image: fast3Image,
-      title:
-        "Another Grim Tally of U.S. Unemployment Is Expected: Live Business Updates",
-      date: "May 20, 2020",
-      content: "Live stock Market News Darling the Coronavirus Pandemic.",
-      smallImage: true,
-      smallestOverall: true,
-      hideReadMore: true,
-      showShowAllLink: true,
-    },
-  ];
-
   return (
     <AppContainer>
       <head>
@@ -111,22 +116,20 @@ const App = () => {
         <Navbar items={mainNavItems} />
         <BusinessNav />
         <Section>
-          {articles.map((article, index) => (
-            <Article
-              key={index}
-              image={article.image}
-              subtitle={article.subtitle}
-              sectionTitle={article.sectionTitle}
-              date={article.date}
-              title={article.title}
-              content={article.content}
-              smallImage={article.smallImage}
-              smallestOverall={article.smallestOverall}
-              hideReadMore={article.hideReadMore}
-              showIcon={article.showIcon}
-              smallTitle={article.smallTitle}
-              showShowAllLink={article.showShowAllLink}
-            />
+          <Article
+            image={article1Image}
+            subtitle="TECH FIX"
+            date="May 20, 2020"
+            title="Everything You Need to Know About Slow Internet Speeds"
+            content="Our Crummy connections are the biggest tech headache in the pandemic. Here's a comprehensive guide to do about them."
+          />
+          {articlesData.map((section, index) => (
+            <div key={index}>
+              <SectionTitle>{section.sectionTitle}</SectionTitle>
+              {section.articles.map((article, idx) => (
+                <Article key={idx} {...article} />
+              ))}
+            </div>
           ))}
         </Section>
         <MarketSnapshotNav />

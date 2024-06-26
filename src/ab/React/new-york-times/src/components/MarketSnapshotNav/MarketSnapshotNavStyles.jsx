@@ -1,10 +1,10 @@
 // MarketSnapshotNav/MarketSnapshotNavStyles.js
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const MarketSnapshotNavContainer = styled.nav`
   display: flex;
   justify-content: flex-start;
-  margin-top: 15px;
+  margin-top: 10rem;
 `;
 
 export const MarketSnapshotNavList = styled.ul`

@@ -1,3 +1,4 @@
+// Article.js
 import React from "react";
 import {
   ArticleContainer,
@@ -14,33 +15,47 @@ import {
 
 const Article = ({
   image,
-  subtitle,
   sectionTitle,
+  subtitle,
   date,
   title,
   content,
+  showIcon,
   smallImage,
+  smallTitle,
   smallestOverall,
   hideReadMore,
-  showIcon,
-  smallTitle,
   showShowAllLink,
 }) => {
   return (
     <ArticleContainer>
-      {image && <Image src={image} alt={title} small={smallImage} />}
       {sectionTitle && <SectionTitle>{sectionTitle}</SectionTitle>}
-      <Subtitle>
-        {subtitle && <Category>{subtitle}</Category>}
-        {date && <Date>{date}</Date>}
-        {showIcon && <Icon className="bx bx-bar-chart"></Icon>}
-      </Subtitle>
+      {image && <Image src={image} alt="Article Image" small={smallImage} />}
+      {subtitle && (
+        <Subtitle>
+          <Category>{subtitle}</Category>
+          <Date className="date">{date}</Date>
+        </Subtitle>
+      )}
       <ArticleTitle smallTitle={smallTitle} smallestOverall={smallestOverall}>
         {title}
       </ArticleTitle>
       <Content>{content}</Content>
-      {!hideReadMore && <ReadMore href="#">Read more</ReadMore>}
-      {showShowAllLink && <ReadMore href="#">Show all</ReadMore>}
+      <ReadMore href="#" className="links" hideReadMore={hideReadMore}>
+        Continue Reading
+      </ReadMore>
+      {showIcon && (
+        <div>
+          <Icon className="bx bx-circle"></Icon>
+          <Icon className="bx bxs-circle"></Icon>
+          <Icon className="bx bxs-circle"></Icon>
+        </div>
+      )}
+      {showShowAllLink && (
+        <ReadMore href="#" className="links">
+          Show All
+        </ReadMore>
+      )}
     </ArticleContainer>
   );
 };

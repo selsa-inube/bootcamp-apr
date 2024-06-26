@@ -13,9 +13,8 @@ export const Image = styled.img`
   ${(props) =>
     props.small &&
     css`
-      width: 35%;
+      width: 27%;
       float: right;
-      margin-top: 10px;
       margin-left: 10px;
     `}
 `;
